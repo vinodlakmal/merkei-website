@@ -3,50 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merkei Solutions | Official Site</title>
+    <title>Merkei Solutions | Enterprise IT Infrastructure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #1c1e21;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .card {
-            background-color: #fff;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 500px;
-        }
-        h1 {
-            color: #007bff;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #4b4f56;
-        }
-        .tagline {
-            font-weight: bold;
-            color: #28a745;
-        }
+        :root { --primary: #0062ff; --secondary: #00d4ff; --dark: #0a0a0a; --gray: #f4f4f4; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background: var(--dark); color: white; line-height: 1.6; }
+        nav { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.8); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
+        .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; background: radial-gradient(circle at center, #111 0%, #000 100%); }
+        header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; color: #aaa; max-width: 600px; }
+        .btn { background: var(--primary); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: var(--secondary); transform: translateY(-3px); }
+        .services { padding: 80px 10%; background: white; color: black; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card { padding: 30px; background: var(--gray); border-radius: 10px; transition: 0.3s; border-bottom: 4px solid var(--primary); }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        footer { padding: 50px 10%; text-align: center; border-top: 1px solid #333; background: black; }
+        @media (max-width: 768px) { header h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Merkei Solutions</h1>
-        <p class="tagline">System Administration & IT Solutions</p>
-        <hr style="border: 0.5px solid #eee; margin: 20px 0;">
-        <p>Our official website is currently under construction. <br> <strong>Coming Soon!</strong></p>
+<nav>
+    <div class="logo">MERKEI SOLUTIONS</div>
+    <div style="color: #aaa; font-size: 0.9rem;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
+</nav>
+
+<header>
+    <h1>Next-Gen IT Infrastructure</h1>
+    <p>Professional Systems Administration, Cloud Solutions, and Network Security tailored for your business needs.</p>
+    <a href="mailto:info@merkeisolutions.com" class="btn">Get Started</a>
+</header>
+
+<div class="services">
+    <div class="service-card">
+        <i class="fas fa-server"></i>
+        <h3>System Admin</h3>
+        <p>Expert Windows & Linux server management, virtualization, and performance tuning.</p>
     </div>
+    <div class="service-card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Solutions</h3>
+        <p>Seamless migration and management for Azure, AWS, and DigitalOcean environments.</p>
+    </div>
+    <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security & ISO</h3>
+        <p>Implementing ISO 27001 aligned processes to keep your data safe and compliant.</p>
+    </div>
+    <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Custom Apps</h3>
+        <p>Development and Dockerized hosting of enterprise applications and automation tools.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Merkei Solutions. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
