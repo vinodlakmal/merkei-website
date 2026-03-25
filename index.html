@@ -3,40 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Merkei Solutions | Smart IT & Communication Systems</title>
+<title>Merkei Solutions | Premium IT Systems</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root {
-  --primary: #0062ff;
-  --secondary: #00c2ff;
-  --dark: #0a192f;
+  --primary:#0062ff;
+  --secondary:#00c2ff;
+  --bg:#020617;
 }
-
-html { scroll-behavior: smooth; }
 
 body {
   margin:0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #0a192f 0%, #020617 100%);
+  font-family:'Inter', sans-serif;
+  background: radial-gradient(circle at top, #0a192f, #020617);
   color:white;
+  overflow-x:hidden;
 }
 
 /* NAV */
 nav {
-  padding:20px 10%;
   display:flex;
   justify-content:space-between;
-  background:rgba(0,0,0,0.8);
+  padding:20px 10%;
   position:sticky;
   top:0;
+  backdrop-filter: blur(10px);
+  background:rgba(0,0,0,0.4);
 }
 
 .logo {
-  font-weight:bold;
   font-size:1.5rem;
+  font-weight:bold;
   background:linear-gradient(to right,var(--primary),var(--secondary));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -45,11 +45,14 @@ nav {
 /* HERO */
 header {
   text-align:center;
-  padding:120px 10%;
+  padding:140px 10%;
 }
 
 header h1 {
-  font-size:3rem;
+  font-size:3.5rem;
+  background:linear-gradient(to right,#fff,#aaa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 header p {
@@ -59,29 +62,35 @@ header p {
 }
 
 .btn {
-  display:inline-block;
-  margin-top:25px;
   padding:12px 25px;
   border-radius:8px;
   text-decoration:none;
+  margin-top:20px;
+  display:inline-block;
 }
 
 .btn-primary {
-  background:var(--primary);
+  background:linear-gradient(to right,var(--primary),var(--secondary));
   color:white;
 }
 
 .btn-outline {
-  border:1px solid #555;
+  border:1px solid #444;
   color:white;
   margin-left:10px;
+}
+
+/* GLASS CARD */
+.glass {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius:15px;
 }
 
 /* SERVICES */
 .services {
   padding:80px 10%;
-  background:white;
-  color:black;
   text-align:center;
 }
 
@@ -94,34 +103,23 @@ header p {
 
 .card {
   padding:25px;
-  background:#f4f4f4;
-  border-radius:12px;
   transition:0.3s;
 }
 
 .card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 0 25px rgba(0,98,255,0.3);
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 30px rgba(0,194,255,0.3);
 }
 
-/* WHY */
-.why {
-  padding:70px 10%;
+/* PROJECTS */
+.projects {
+  padding:80px 10%;
   text-align:center;
 }
 
-.why-box {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-  margin-top:30px;
-}
-
-.why-box div {
-  background:#111;
-  padding:15px 25px;
-  border-radius:8px;
+.project {
+  margin-top:15px;
+  padding:20px;
 }
 
 /* CONTACT */
@@ -132,25 +130,23 @@ header p {
 .form-box {
   max-width:600px;
   margin:auto;
-  background:#111;
   padding:40px;
-  border-radius:12px;
 }
 
 input, textarea {
   width:100%;
   padding:15px;
   margin-bottom:15px;
-  background:#000;
-  border:1px solid #333;
-  color:white;
   border-radius:8px;
+  border:none;
+  background:rgba(255,255,255,0.05);
+  color:white;
 }
 
 button {
   width:100%;
   padding:15px;
-  background:var(--primary);
+  background:linear-gradient(to right,var(--primary),var(--secondary));
   border:none;
   color:white;
   font-weight:bold;
@@ -158,11 +154,16 @@ button {
   cursor:pointer;
 }
 
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:30px;
-  color:#777;
+/* ANIMATION */
+.fade {
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* WHATSAPP */
@@ -173,7 +174,6 @@ footer {
   background:#25D366;
   padding:15px;
   border-radius:50%;
-  color:white;
 }
 </style>
 </head>
@@ -186,56 +186,54 @@ footer {
 </nav>
 
 <header>
-  <h1>Smart IT & Communication Solutions</h1>
-  <p>We design, deploy, and manage VoIP, Cloud, and secure IT systems for modern businesses.</p>
+  <h1>Future-Ready IT & Communication Systems</h1>
+  <p>VoIP, SMS Gateway, Cloud Infrastructure & Security for modern businesses.</p>
 
-  <a href="#contact" class="btn btn-primary">Get Started</a>
-  <a href="#services" class="btn btn-outline">Our Services</a>
+  <a href="#contact" class="btn btn-primary">Start Now</a>
+  <a href="#services" class="btn btn-outline">Explore</a>
 </header>
 
-<section id="services" class="services">
+<section id="services" class="services fade">
   <h2>Our Services</h2>
 
   <div class="grid">
-    <div class="card">
+    <div class="card glass">
       <i class="fas fa-server fa-2x"></i>
-      <h3>Systems Administration</h3>
-      <p>Linux & Windows server management and virtualization.</p>
+      <h3>Systems Admin</h3>
+      <p>Enterprise server solutions.</p>
     </div>
 
-    <div class="card">
+    <div class="card glass">
       <i class="fas fa-cloud fa-2x"></i>
-      <h3>Cloud Solutions</h3>
-      <p>Azure, AWS & VPS deployments with scalability.</p>
+      <h3>Cloud</h3>
+      <p>Azure, AWS, VPS deployments.</p>
     </div>
 
-    <div class="card">
+    <div class="card glass">
       <i class="fas fa-sms fa-2x"></i>
-      <h3>SMS & OTP Gateway</h3>
-      <p>High-performance SMPP systems for messaging.</p>
+      <h3>SMS Gateway</h3>
+      <p>OTP & SMPP systems.</p>
     </div>
 
-    <div class="card">
+    <div class="card glass">
       <i class="fas fa-shield-alt fa-2x"></i>
-      <h3>Security & ISO</h3>
-      <p>ISO 27001 aligned security and IT audits.</p>
+      <h3>Security</h3>
+      <p>ISO 27001 security systems.</p>
     </div>
   </div>
 </section>
 
-<section class="why">
-  <h2>Why Choose Us</h2>
+<section class="projects fade">
+  <h2>Projects</h2>
 
-  <div class="why-box">
-    <div>⚡ Fast Deployment</div>
-    <div>🔒 Secure Systems</div>
-    <div>🌍 Global Ready</div>
-    <div>💼 Business Focused</div>
-  </div>
+  <div class="project glass">✔ FreePBX VoIP System (5000+ calls/day)</div>
+  <div class="project glass">✔ SMPP SMS Gateway</div>
+  <div class="project glass">✔ Azure Cloud Setup</div>
+  <div class="project glass">✔ Firewall & Security</div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="form-box">
+<section id="contact" class="contact fade">
+  <div class="form-box glass">
     <h2 style="text-align:center;">Start Your Project</h2>
 
     <form action="https://api.web3forms.com/submit" method="POST">
@@ -250,13 +248,26 @@ footer {
   </div>
 </section>
 
-<footer>
-  © 2026 Merkei Solutions. All rights reserved.
+<footer style="text-align:center; padding:30px; color:#666;">
+  © 2026 Merkei Solutions
 </footer>
 
-<a href="https://wa.me/947XXXXXXXX" class="whatsapp">
+<a href="https://wa.me/94701113511?text=Hi%20Merkei%20Solutions,%20I%20need%20your%20service" class="whatsapp">
   <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
