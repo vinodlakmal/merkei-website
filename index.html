@@ -3,67 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Merkei Solutions | Enterprise Cloud & Network Infrastructure Specialist</title>
-    <meta name="description" content="Merkei Solutions provides expert Multicloud (Azure/GCP), Secure SMS Gateway (Jasmin/SMPP), and VoIP solutions. ISO 27001 aligned security and systems automation.">
-    <link rel="stylesheet" href="style.css"> </head>
+    <meta name="description" content="Expert Multicloud (Azure/GCP), Secure SMS Gateway (Jasmin/SMPP), and VoIP solutions by Vinod Lakmal. ISO 27001 aligned security and systems automation.">
+    <meta name="author" content="Vinod Lakmal">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://merkeisolutions.com/">
+    <meta property="og:title" content="Merkei Solutions | Strategic Cloud & Network Specialist">
+    <meta property="og:description" content="Leading the transition to resilient multicloud architectures and secure enterprise communication systems.">
+    <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary:#0062ff;
+            --secondary:#00c2ff;
+            --bg:#020617;
+        }
+
+        body {
+            margin:0;
+            font-family:'Inter', sans-serif;
+            background: radial-gradient(circle at top, #0a192f, #020617);
+            color:white;
+            overflow-x:hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            padding:20px 10%;
+            position:sticky;
+            top:0;
+            backdrop-filter: blur(15px);
+            background:rgba(0,0,0,0.6);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size:1.6rem;
+            font-weight:bold;
+            letter-spacing: 1px;
+            background:linear-gradient(to right,var(--primary),var(--secondary));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        /* HERO SECTION */
+        header {
+            text-align:center;
+            padding:120px 10% 80px;
+        }
+
+        header h1 {
+            font-size:3.5rem;
+            margin-bottom: 20px;
+            background:linear-gradient(to right,#fff,#888);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            line-height: 1.2;
+        }
+
+        header p {
+            color:#aaa;
+            max-width:750px;
+            margin:auto;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .btn-group { margin-top: 30px; }
+
+        .btn {
+            padding:14px 30px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight: 600;
+            transition: 0.3s;
+            display:inline-block;
+        }
+
+        .btn-primary {
+            background:linear-gradient(to right,var(--primary),var(--secondary));
+            color:white;
+            box-shadow: 0 4px 15px rgba(0, 98, 255, 0.4);
+        }
+
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 98, 255, 0.6); }
+
+        .btn-outline {
+            border:1px solid rgba(255,255,255,0.2);
+            color:white;
+            margin-left:15px;
+        }
+
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+        /* GLASS CARD EFFECT */
+        .glass {
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border-radius:15px;
+        }
+
+        /* SERVICES GRID */
+        .services { padding:100px 10%; text-align:center; }
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:50px;
+        }
+
+        .card { padding:35px; transition:0.4s ease; text-align: left; }
+        .card:hover {
+            transform:translateY(-10px);
+            background: rgba(255,255,255,0.07);
+            border-color: var(--secondary);
+        }
+        .card i { color: var(--secondary); margin-bottom: 20px; }
+        .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
+        .card p { color: #888; font-size: 0.95rem; line-height: 1.5; }
+
+        /* PROJECTS SECTION */
+        .projects { padding:80px 10%; text-align:center; background: rgba(0,0,0,0.2); }
+        .project-list { max-width: 850px; margin: 40px auto; }
+        .project {
+            margin-bottom:15px;
+            padding:20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .project i { color: #2ecc71; }
+
+        /* CONTACT FORM */
+        .contact { padding:100px 10%; }
+        .form-box { max-width:600px; margin:auto; padding:40px; }
+        input, textarea {
+            width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);
+            background:rgba(0,0,0,0.3); color:white; box-sizing: border-box; font-family: inherit;
+        }
+        input:focus, textarea:focus { outline: 2px solid var(--primary); background: rgba(0,0,0,0.5); }
+        button {
+            width:100%; padding:16px; background:linear-gradient(to right,var(--primary),var(--secondary));
+            border:none; color:white; font-weight:bold; border-radius:8px; cursor:pointer; font-size: 1rem; transition: 0.3s;
+        }
+        button:hover { opacity: 0.9; transform: scale(1.01); }
+
+        /* ANIMATION */
+        .fade { opacity:0; transform:translateY(30px); transition: 0.8s ease-out; }
+        .fade.show { opacity:1; transform:translateY(0); }
+
+        /* FIXED WHATSAPP */
+        .whatsapp {
+            position:fixed; bottom:30px; right:30px; background:#25D366; color: white;
+            width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+            border-radius:50%; font-size: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000; transition: 0.3s; text-decoration: none;
+        }
+        .whatsapp:hover { transform: scale(1.1); background: #20ba5a; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            nav { padding: 20px 5%; }
+        }
+    </style>
+</head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">MERKEI SOLUTIONS</div>
-            <div class="contact-email">info@merkeisolutions.com</div>
-        </nav>
-        <section class="hero">
-            <h1>Strategic IT Infrastructure & <br><span>Multicloud Connectivity Solutions</span></h1>
-            <p>Future-ready Systems Administration, Aviatrix-certified Multicloud Networking, and ISO 27001-aligned Security frameworks tailored for modern enterprises.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">Start Your Project</a>
-                <a href="#services" class="btn-secondary">Explore Services</a>
-            </div>
-        </section>
-    </header>
+<nav>
+    <div class="logo">MERKEI SOLUTIONS</div>
+    <div style="color: #888; font-size: 0.9rem;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
+</nav>
 
-    <section id="services" class="expertise">
-        <h2>Core Expertise & Solutions</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Systems Administration</h3>
-                <p>Enterprise Windows & Linux server management, Docker containerization, and proactive infrastructure monitoring for 99.9% uptime.</p>
-            </div>
-            <div class="card">
-                <h3>Multicloud Infrastructure</h3>
-                <p>Expert Azure & GCP deployment, Aviatrix-certified multicloud connectivity, and strategic cost optimization for cloud assets.</p>
-            </div>
-            <div class="card">
-                <h3>Secure SMS Gateways</h3>
-                <p>High-performance Jasmin & SMPP gateway integration for financial OTP services and high-volume corporate messaging.</p>
-            </div>
-            <div class="card">
-                <h3>Security & Compliance</h3>
-                <p>ISO 27001 aligned security frameworks, firewall management, and zero-trust architecture to protect critical business data.</p>
-            </div>
+<header>
+    <div class="fade show">
+        <h1>Strategic IT Infrastructure & <br>Multicloud Connectivity Solutions</h1>
+        <p>Providing expert Systems Administration, Aviatrix-certified Multicloud Networking, and ISO 27001-aligned Security frameworks for global enterprises.</p>
+        <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+            <a href="#services" class="btn btn-outline">Explore Expertise</a>
         </div>
-    </section>
+    </div>
+</header>
 
-    <section class="track-record">
-        <h2>Proven Track Record</h2>
-        <ul>
-            <li><strong>High-Availability VoIP:</strong> Scalable Issabel & Asterisk IP-PBX solutions for enterprise communication.</li>
-            <li><strong>Financial OTP Services:</strong> Secure SMPP Gateway architectures for mission-critical messaging.</li>
-            <li><strong>Cloud Transformation:</strong> Seamless migration and management of resilient Azure & GCP cloud environments.</li>
-            <li><strong>Custom Enterprise Apps:</strong> Developed a Dockerized 360-degree multi-rater assessment platform for corporate HR.</li>
-        </ul>
-    </section>
+<section id="services" class="services">
+    <h2 class="fade">Core Expertise & Solutions</h2>
+    <div class="grid">
+        <div class="card glass fade">
+            <i class="fas fa-server fa-2x"></i>
+            <h3>Systems Admin</h3>
+            <p>Enterprise Windows & Linux server management, Docker containerization, and virtualization (Hyper-V/ESXi) with proactive 24/7 monitoring.</p>
+        </div>
+        <div class="card glass fade">
+            <i class="fas fa-cloud-network fa-2x"></i>
+            <i class="fas fa-cloud fa-2x"></i>
+            <h3>Multicloud Strategy</h3>
+            <p>Certified Azure & GCP architecting, Aviatrix multicloud connectivity, and strategic cost optimization for modern cloud environments.</p>
+        </div>
+        <div class="card glass fade">
+            <i class="fas fa-sms fa-2x"></i>
+            <h3>Secure SMS Gateways</h3>
+            <p>High-performance Jasmin & SMPP gateway integration for financial-grade OTP services and secure enterprise messaging protocols.</p>
+        </div>
+        <div class="card glass fade">
+            <i class="fas fa-shield-alt fa-2x"></i>
+            <h3>Security Compliance</h3>
+            <p>ISO 27001 aligned security frameworks, zero-trust network architecture, and robust firewall management for data integrity.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="contact" class="footer-contact">
-        <h2>Let's Build Something Resilient</h2>
-        <p>Contact us today for a free infrastructure audit or custom solution proposal.</p>
-        <a href="mailto:info@merkeisolutions.com" class="email-btn">info@merkeisolutions.com</a>
-    </section>
+<section class="projects">
+    <h2 class="fade">Proven Track Record of Impact</h2>
+    <div class="project-list fade">
+        <div class="project glass"><i class="fas fa-check-circle"></i> High-Availability Issabel & Asterisk IP-PBX VoIP Solutions</div>
+        <div class="project glass"><i class="fas fa-check-circle"></i> Secure SMPP Gateway Integration for Financial & OTP Services</div>
+        <div class="project glass"><i class="fas fa-check-circle"></i> Seamless Azure & GCP Cloud Infrastructure Migration & Management</div>
+        <div class="project glass"><i class="fas fa-check-circle"></i> Developed a Dockerized 360-Degree Multi-Rater Assessment Platform</div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 Merkei Solutions. All Rights Reserved.</p>
-    </footer>
+<section id="contact" class="contact">
+    <div class="form-box glass fade">
+        <h2 style="text-align:center; margin-bottom: 30px;">Let's Build Something Resilient</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" rows="5" placeholder="Tell us about your project (Cloud, SMS Gateway, Security, etc.)..." required></textarea>
+            <button type="submit">Submit Solution Proposal</button>
+        </form>
+    </div>
+</section>
+
+<footer style="text-align:center; padding:40px; color:#444; border-top: 1px solid rgba(255,255,255,0.05);">
+    © 2026 Merkei Solutions. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/94701113511" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const faders = document.querySelectorAll('.fade');
+    const appearOptions = { threshold: 0.3 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('show');
+            appearOnScroll.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
 
 </body>
 </html>
