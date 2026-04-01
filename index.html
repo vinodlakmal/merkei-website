@@ -3,192 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merkei Solutions | Enterprise Cloud & Infrastructure Architect</title>
     
-    <title>Merkei Solutions | Enterprise IT Systems & Security</title>
-    <meta name="description" content="Expert Systems Administration, VoIP, Cloud Infrastructure, and ISO 27001 aligned security solutions by Vinod Lakmal.">
-    <meta name="author" content="Vinod Lakmal">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://merkeisolutions.com/">
-    <meta property="og:title" content="Merkei Solutions | Vinod Lakmal - IT Systems Specialist">
-    <meta property="og:description" content="Future-ready IT & Communication systems. Specializing in Azure Cloud, SMS Gateways, and Enterprise Security.">
-    <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://merkeisolutions.com/">
-    <meta property="twitter:title" content="Merkei Solutions | Enterprise IT Systems">
-    <meta property="twitter:description" content="Expert IT managed services and secure cloud solutions.">
-    <meta property="twitter:image" content="https://merkeisolutions.com/images/og-banner.jpg">
-
+    <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --primary:#0062ff;
-            --secondary:#00c2ff;
-            --bg:#020617;
+            --primary: #0062ff;
+            --secondary: #00c2ff;
+            --bg: #020617;
+            --card-bg: rgba(255, 255, 255, 0.05);
         }
 
         body {
-            margin:0;
-            font-family:'Inter', sans-serif;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, #0a192f, #020617);
-            color:white;
-            overflow-x:hidden;
+            color: white;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
-        /* NAVIGATION */
         nav {
-            display:flex;
-            justify-content:space-between;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding:20px 10%;
-            position:sticky;
-            top:0;
-            backdrop-filter: blur(15px);
-            background:rgba(0,0,0,0.6);
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
-            font-size:1.6rem;
-            font-weight:bold;
-            letter-spacing: 1px;
-            background:linear-gradient(to right,var(--primary),var(--secondary));
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* HERO SECTION */
         header {
-            text-align:center;
-            padding:120px 10% 80px;
+            text-align: center;
+            padding: 120px 10% 80px;
         }
 
         header h1 {
-            font-size:3.5rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            background:linear-gradient(to right,#fff,#888);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
-            color:#aaa;
-            max-width:700px;
-            margin:auto;
-            font-size: 1.1rem;
+            color: #aaa;
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.2rem;
         }
-
-        .btn-group { margin-top: 30px; }
 
         .btn {
-            padding:14px 30px;
-            border-radius:8px;
-            text-decoration:none;
-            font-weight: 600;
-            transition: 0.3s;
-            display:inline-block;
-        }
-
-        .btn-primary {
-            background:linear-gradient(to right,var(--primary),var(--secondary));
-            color:white;
-            box-shadow: 0 4px 15px rgba(0, 98, 255, 0.4);
-        }
-
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 98, 255, 0.6); }
-
-        .btn-outline {
-            border:1px solid rgba(255,255,255,0.2);
-            color:white;
-            margin-left:15px;
-        }
-
-        .btn-outline:hover { background: rgba(255,255,255,0.1); }
-
-        /* GLASS CARD EFFECT */
-        .glass {
-            background:rgba(255,255,255,0.03);
-            border:1px solid rgba(255,255,255,0.08);
-            backdrop-filter: blur(12px);
-            border-radius:15px;
-        }
-
-        /* SERVICES GRID */
-        .services { padding:100px 10%; text-align:center; }
-        .grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-            margin-top:50px;
-        }
-
-        .card { padding:35px; transition:0.4s ease; text-align: left; }
-        .card:hover {
-            transform:translateY(-10px);
-            background: rgba(255,255,255,0.07);
-            border-color: var(--secondary);
-        }
-        .card i { color: var(--secondary); margin-bottom: 20px; }
-        .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
-        .card p { color: #888; font-size: 0.95rem; }
-
-        /* PROJECTS SECTION */
-        .projects { padding:80px 10%; text-align:center; background: rgba(0,0,0,0.2); }
-        .project-list { max-width: 800px; margin: 40px auto; }
-        .project {
-            margin-bottom:15px;
-            padding:20px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 15px;
-            text-align: left;
-        }
-        .project i { color: #2ecc71; }
-
-        /* CONTACT FORM */
-        .contact { padding:100px 10%; }
-        .form-box { max-width:600px; margin:auto; padding:40px; }
-        input, textarea {
-            width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);
-            background:rgba(0,0,0,0.3); color:white; box-sizing: border-box; font-family: inherit;
-        }
-        input:focus, textarea:focus { outline: 2px solid var(--primary); background: rgba(0,0,0,0.5); }
-        button {
-            width:100%; padding:16px; background:linear-gradient(to right,var(--primary),var(--secondary));
-            border:none; color:white; font-weight:bold; border-radius:8px; cursor:pointer; font-size: 1rem; transition: 0.3s;
-        }
-        button:hover { opacity: 0.9; transform: scale(1.01); }
-
-        /* ANIMATION */
-        .fade { opacity:0; transform:translateY(30px); transition: 0.8s ease-out; }
-        .fade.show { opacity:1; transform:translateY(0); }
-
-        /* FIXED WHATSAPP - Fixed Link */
-        .whatsapp {
-            position:fixed;
-            bottom:30px;
-            right:30px;
-            background:#25D366;
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius:50%;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: 0.3s;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: 0.3s;
         }
-        .whatsapp:hover { transform: scale(1.1); background: #20ba5a; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 98, 255, 0.4); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 80px 10%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--secondary); transform: translateY(-5px); }
+        .card i { color: var(--secondary); font-size: 2.5rem; margin-bottom: 20px; }
+
+        .portfolio {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 100px 10%;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .project-card h3 { margin-top: 0; font-size: 1.5rem; }
+        .project-card p { color: #ccc; margin-bottom: 20px; }
+
+        .tag {
+            font-size: 0.8rem;
+            background: rgba(0, 98, 255, 0.15);
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-right: 8px;
+            color: var(--secondary);
+            border: 1px solid rgba(0, 194, 255, 0.2);
+        }
+
+        .contact-section { padding: 100px 10%; }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .whatsapp {
+            position: fixed; bottom: 30px; right: 30px; background: #25D366;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 35px; color: white; text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            z-index: 1000;
+        }
 
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
@@ -196,97 +173,84 @@
         }
     </style>
 </head>
-
 <body>
 
 <nav>
-    <div class="logo">MERKEI</div>
-    <div style="color: #888; font-size: 0.9rem;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
+    <div class="logo">MERKEI SOLUTIONS</div>
+    <div style="font-size: 0.9rem; color: #aaa;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
 </nav>
 
 <header>
-    <div class="fade show">
-        <h1>Future-Ready IT & Communication Systems</h1>
-        <p>Expert Systems Administration, VoIP, Cloud Infrastructure, and Security solutions tailored for modern enterprises.</p>
-        <div class="btn-group">
-            <a href="#contact" class="btn btn-primary">Start Project</a>
-            <a href="#services" class="btn btn-outline">Our Services</a>
-        </div>
-    </div>
+    <h1>Strategic IT Infrastructure & <br>Multicloud Solutions</h1>
+    <p>Architecting resilient, automated, and secure systems aligned with ISO 27001 standards. Expert solutions by Vinod Lakmal.</p>
+    <a href="#contact" class="btn">Initiate Project</a>
 </header>
 
-<section id="services" class="services">
-    <h2 class="fade">Core Expertise</h2>
-    <div class="grid">
-        <div class="card glass fade">
-            <i class="fas fa-server fa-2x"></i>
-            <h3>Systems Admin</h3>
-            <p>Windows & Linux server management, virtualization (Hyper-V/ESXi), and proactive monitoring.</p>
+<section class="services-grid">
+    <div class="card">
+        <i class="fas fa-microchip"></i>
+        <h3>Systems Orchestration</h3>
+        <p>Enterprise server management and Docker containerization for 24/7 mission-critical uptime.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Multicloud Architecting</h3>
+        <p>Designing secure hybrid-cloud environments across Azure, DigitalOcean, and GCP.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-lock"></i>
+        <h3>Secure Messaging</h3>
+        <p>Carrier-grade Jasmin SMS Gateway setups for high-volume financial and OTP delivery systems.</p>
+    </div>
+</section>
+
+<section class="portfolio">
+    <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 50px;">Case Studies & Impact</h2>
+    
+    <div class="project-card">
+        <h3>Enterprise SMS Gateway Optimization</h3>
+        <p>Re-architected an international SMS delivery system using Jasmin SMS and Docker. Successfully increased message throughput by 300% and implemented real-time SMPP monitoring.</p>
+        <div>
+            <span class="tag">Jasmin SMS</span> <span class="tag">Docker</span> <span class="tag">Azure</span> <span class="tag">SMPP</span>
         </div>
-        <div class="card glass fade">
-            <i class="fas fa-cloud fa-2x"></i>
-            <h3>Cloud Infrastructure</h3>
-            <p>Azure and AWS deployment, migration strategies, and cost optimization for cloud assets.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Secure 360-Assessment Platform Infrastructure</h3>
+        <p>Designed and deployed a high-availability infrastructure for a corporate HR assessment platform. Integrated Cloudflare Zero Trust and Nginx to handle thousands of concurrent users securely.</p>
+        <div>
+            <span class="tag">Cloudflare</span> <span class="tag">Docker</span> <span class="tag">Security Hardening</span> <span class="tag">Nginx</span>
         </div>
-        <div class="card glass fade">
-            <i class="fas fa-sms fa-2x"></i>
-            <h3>SMS Gateways</h3>
-            <p>High-performance SMPP setups, OTP systems, and Jasmin/SMPP gateway integration.</p>
-        </div>
-        <div class="card glass fade">
-            <i class="fas fa-shield-alt fa-2x"></i>
-            <h3>Security Compliance</h3>
-            <p>ISO 27001 aligned security frameworks, firewall management, and vulnerability assessments.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Automated Crypto Market Scanner</h3>
+        <p>Developed a real-time data streaming bot using Python and Binance WebSockets to analyze market volatility and identify trading patterns with low-latency execution.</p>
+        <div>
+            <span class="tag">Python</span> <span class="tag">WebSockets</span> <span class="tag">API Integration</span> <span class="tag">Automation</span>
         </div>
     </div>
 </section>
 
-<section class="projects">
-    <h2 class="fade">Proven Track Record</h2>
-    <div class="project-list fade">
-        <div class="project glass"><i class="fas fa-check-circle"></i> High-Availability Enterprise FreePBX VoIP Solutions</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Scalable SMPP Gateway for Financial & OTP Services</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Secure Azure Cloud Infrastructure Migration & Management</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Custom 360-Degree Multi-Rater Assessment Platform</div>
-    </div>
+<section id="contact" class="contact-section">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <h2 style="text-align:center;">Build a Resilient Future</h2>
+        <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+        <textarea name="message" rows="5" placeholder="Outline your requirements..." required></textarea>
+        <button type="submit">Submit Solution Proposal</button>
+    </form>
 </section>
 
-<section id="contact" class="contact">
-    <div class="form-box glass fade">
-        <h2 style="text-align:center; margin-bottom: 30px;">Let's Build Something Great</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <textarea name="message" rows="5" placeholder="Project details (e.g., Cloud, SMS Gateway, Security)..." required></textarea>
-            <button type="submit">Submit Proposal</button>
-        </form>
-    </div>
-</section>
-
-<footer style="text-align:center; padding:40px; color:#444; border-top: 1px solid rgba(255,255,255,0.05);">
-    © 2026 Merkei Solutions. All Rights Reserved.
+<footer style="text-align:center; padding: 50px; color: #444; border-top: 1px solid rgba(255,255,255,0.05);">
+    © 2026 Merkei Solutions. All Rights Reserved. <br>
+    <span style="font-size: 0.8rem;">Architected by Vinod Lakmal.</span>
 </footer>
 
-<a href="https://wa.me/94701113511" target="_blank" class="whatsapp">
+<a href="https://wa.me/94701113511" class="whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<script>
-    const faders = document.querySelectorAll('.fade');
-    const appearOptions = { threshold: 0.3 };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('show');
-            appearOnScroll.unobserve(entry.target);
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
-
 </body>
 </html>
-
