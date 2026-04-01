@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merkei Solutions | Enterprise Cloud & Infrastructure Architect</title>
     
-    <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal.">
+    <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal. ISO 27001 aligned infrastructure.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,7 +15,8 @@
             --primary: #0062ff;
             --secondary: #00c2ff;
             --bg: #020617;
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
         body {
@@ -32,16 +33,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 10%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
             background: linear-gradient(to right, var(--primary), var(--secondary));
             -webkit-background-clip: text;
@@ -50,129 +51,155 @@
 
         header {
             text-align: center;
-            padding: 120px 10% 80px;
+            padding: 140px 10% 100px;
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, #888);
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #999);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1.1;
         }
 
         header p {
             color: #aaa;
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 35px;
+            padding: 16px 40px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 40px;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 98, 255, 0.3);
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 98, 255, 0.4); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 98, 255, 0.5); }
 
+        /* TECH STACK SECTION */
+        .tech-stack {
+            padding: 60px 10%;
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #888;
+        }
+        .tech-icons span { display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .tech-icons span:hover { color: var(--secondary); transform: scale(1.1); }
+        .tech-icons i { font-size: 2rem; }
+
+        /* SERVICES */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 80px 10%;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 0.3s;
-        }
-        .card:hover { border-color: var(--secondary); transform: translateY(-5px); }
-        .card i { color: var(--secondary); font-size: 2.5rem; margin-bottom: 20px; }
-
-        .portfolio {
-            background: rgba(0, 0, 0, 0.3);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             padding: 100px 10%;
         }
+        .card {
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: 0.4s;
+        }
+        .card:hover { border-color: var(--secondary); background: rgba(255,255,255,0.07); transform: translateY(-10px); }
+        .card i { color: var(--secondary); font-size: 2.8rem; margin-bottom: 25px; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
+        /* WHY US SECTION */
+        .why-us {
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .why-us h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .why-box { margin-bottom: 25px; display: flex; gap: 20px; }
+        .why-box i { color: #2ecc71; font-size: 1.5rem; margin-top: 5px; }
+
+        /* PORTFOLIO */
+        .portfolio {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 100px 10%;
+        }
         .project-card {
             background: rgba(255, 255, 255, 0.03);
-            margin-bottom: 30px;
-            padding: 35px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
+            margin-bottom: 35px;
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 6px solid var(--primary);
+            transition: 0.3s;
         }
-
-        .project-card h3 { margin-top: 0; font-size: 1.5rem; }
-        .project-card p { color: #ccc; margin-bottom: 20px; }
-
+        .project-card:hover { background: rgba(255,255,255,0.05); }
         .tag {
             font-size: 0.8rem;
             background: rgba(0, 98, 255, 0.15);
-            padding: 6px 12px;
+            padding: 6px 14px;
             border-radius: 6px;
-            margin-right: 8px;
+            margin-right: 10px;
             color: var(--secondary);
             border: 1px solid rgba(0, 194, 255, 0.2);
+            display: inline-block;
+            margin-top: 10px;
         }
 
+        /* CONTACT */
         .contact-section { padding: 100px 10%; }
         form {
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
-            padding: 40px;
+            padding: 50px;
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 20px;
             border: 1px solid var(--border);
         }
-
         input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            background: rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: white;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-family: inherit;
+            width: 100%; padding: 18px; margin-bottom: 25px; background: rgba(0,0,0,0.4);
+            border: 1px solid var(--border); color: white; border-radius: 10px;
+            box-sizing: border-box; font-family: inherit; font-size: 1rem;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--primary); background: rgba(0,0,0,0.6); }
+        button {
+            width: 100%; padding: 20px; background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 1.1rem;
         }
 
-        button {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            border: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
+        footer { text-align: center; padding: 60px; color: #555; border-top: 1px solid var(--border); font-size: 0.95rem; }
 
         .whatsapp {
             position: fixed; bottom: 30px; right: 30px; background: #25D366;
             width: 65px; height: 65px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 35px; color: white; text-decoration: none;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000; transition: 0.3s;
         }
+        .whatsapp:hover { transform: scale(1.1) rotate(10deg); }
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            nav { padding: 20px 5%; }
+        @media (max-width: 992px) {
+            .why-us { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
+
 <body>
 
 <nav>
@@ -182,70 +209,112 @@
 
 <header>
     <h1>Strategic IT Infrastructure & <br>Multicloud Solutions</h1>
-    <p>Architecting resilient, automated, and secure systems aligned with ISO 27001 standards. Expert solutions by Vinod Lakmal.</p>
-    <a href="#contact" class="btn">Initiate Project</a>
+    <p>Architecting resilient, secure, and automated multicloud environments aligned with ISO 27001 standards. Tailored solutions for modern enterprise demands.</p>
+    <a href="#contact" class="btn">Initiate Consultation</a>
 </header>
 
-<section class="services-grid">
+<section class="tech-stack">
+    <div class="tech-icons">
+        <span><i class="fab fa-docker"></i> Docker</span>
+        <span><i class="fab fa-microsoft"></i> Azure</span>
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fab fa-linux"></i> Linux</span>
+        <span><i class="fas fa-shield-alt"></i> Cloudflare</span>
+        <span><i class="fas fa-network-wired"></i> SMPP/SMS</span>
+    </div>
+</section>
+
+<section class="services-grid" id="services">
     <div class="card">
         <i class="fas fa-microchip"></i>
         <h3>Systems Orchestration</h3>
-        <p>Enterprise server management and Docker containerization for 24/7 mission-critical uptime.</p>
+        <p>Containerized environment management and enterprise-grade server orchestration for 24/7 critical uptime.</p>
     </div>
     <div class="card">
-        <i class="fas fa-network-wired"></i>
+        <i class="fas fa-cloud-upload-alt"></i>
         <h3>Multicloud Architecting</h3>
-        <p>Designing secure hybrid-cloud environments across Azure, DigitalOcean, and GCP.</p>
+        <p>Designing secure, cost-effective hybrid-cloud structures across Azure, GCP, and specialized providers like Contabo.</p>
     </div>
     <div class="card">
         <i class="fas fa-lock"></i>
         <h3>Secure Messaging</h3>
-        <p>Carrier-grade Jasmin SMS Gateway setups for high-volume financial and OTP delivery systems.</p>
+        <p>Carrier-grade Jasmin SMS Gateway deployments for mission-critical financial alerts and global OTP services.</p>
+    </div>
+</section>
+
+<section class="why-us">
+    <div>
+        <h2>Why Partner with <br>Merkei Solutions?</h2>
+        <p style="color: #888;">We don't just fix problems; we prevent them through strategic architecting and proactive monitoring.</p>
+    </div>
+    <div>
+        <div class="why-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <strong>Proactive Prevention</strong>
+                <p style="color: #777; margin: 0;">Reducing downtime risk by 90% through resilient system design and 24/7 monitoring.</p>
+            </div>
+        </div>
+        <div class="why-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <strong>Cost Governance</strong>
+                <p style="color: #777; margin: 0;">Optimizing multicloud infrastructure to reduce monthly operational costs significantly.</p>
+            </div>
+        </div>
+        <div class="why-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <strong>ISO 27001 Alignment</strong>
+                <p style="color: #777; margin: 0;">Ensuring every deployment follows global security standards for maximum data integrity.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="portfolio">
-    <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 50px;">Case Studies & Impact</h2>
+    <h2 style="text-align:center; font-size: 2.8rem; margin-bottom: 60px;">Proven Strategic Impact</h2>
     
     <div class="project-card">
         <h3>Enterprise SMS Gateway Optimization</h3>
-        <p>Re-architected an international SMS delivery system using Jasmin SMS and Docker. Successfully increased message throughput by 300% and implemented real-time SMPP monitoring.</p>
+        <p>Re-engineered a global SMS delivery infrastructure using Jasmin SMS and Docker. Achieved 3x higher throughput with low-latency SMPP connectivity for financial institutions.</p>
         <div>
-            <span class="tag">Jasmin SMS</span> <span class="tag">Docker</span> <span class="tag">Azure</span> <span class="tag">SMPP</span>
+            <span class="tag">Jasmin SMS</span> <span class="tag">Docker</span> <span class="tag">SMPP</span> <span class="tag">Azure</span>
         </div>
     </div>
 
     <div class="project-card">
-        <h3>Secure 360-Assessment Platform Infrastructure</h3>
-        <p>Designed and deployed a high-availability infrastructure for a corporate HR assessment platform. Integrated Cloudflare Zero Trust and Nginx to handle thousands of concurrent users securely.</p>
+        <h3>Secure 360-Assessment Platform Deployment</h3>
+        <p>Architected a high-availability infrastructure for a multi-rater assessment system. Leveraged Cloudflare Zero Trust and Nginx to handle thousands of concurrent users securely.</p>
         <div>
-            <span class="tag">Cloudflare</span> <span class="tag">Docker</span> <span class="tag">Security Hardening</span> <span class="tag">Nginx</span>
+            <span class="tag">Cloudflare</span> <span class="tag">Docker</span> <span class="tag">Nginx</span> <span class="tag">WAF Security</span>
         </div>
     </div>
 
     <div class="project-card">
         <h3>Automated Crypto Market Scanner</h3>
-        <p>Developed a real-time data streaming bot using Python and Binance WebSockets to analyze market volatility and identify trading patterns with low-latency execution.</p>
+        <p>Developed a custom Python streaming bot utilizing Binance WebSockets for real-time market volatility analysis and automated execution pattern identification.</p>
         <div>
-            <span class="tag">Python</span> <span class="tag">WebSockets</span> <span class="tag">API Integration</span> <span class="tag">Automation</span>
+            <span class="tag">Python</span> <span class="tag">WebSockets</span> <span class="tag">API Integration</span> <span class="tag">Data Analysis</span>
         </div>
     </div>
 </section>
 
 <section id="contact" class="contact-section">
     <form action="https://api.web3forms.com/submit" method="POST">
-        <h2 style="text-align:center;">Build a Resilient Future</h2>
+        <h2 style="text-align:center; margin-bottom: 40px;">Build a Resilient Future</h2>
         <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
+        
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Business Email" required>
-        <textarea name="message" rows="5" placeholder="Outline your requirements..." required></textarea>
+        <textarea name="message" rows="5" placeholder="Tell us about your infrastructure goals..." required></textarea>
         <button type="submit">Submit Solution Proposal</button>
     </form>
 </section>
 
-<footer style="text-align:center; padding: 50px; color: #444; border-top: 1px solid rgba(255,255,255,0.05);">
+<footer>
     © 2026 Merkei Solutions. All Rights Reserved. <br>
-    <span style="font-size: 0.8rem;">Architected by Vinod Lakmal.</span>
+    <span style="font-size: 0.85rem; color: #444;">Strategically Designed by Vinod Lakmal.</span>
 </footer>
 
 <a href="https://wa.me/94701113511" class="whatsapp" target="_blank">
