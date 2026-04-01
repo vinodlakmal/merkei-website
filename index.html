@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Merkei Solutions | Enterprise Cloud & Network Infrastructure Architect</title>
-    <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and Unified Communication systems. ISO 27001 aligned infrastructure and automation by Vinod Lakmal.">
+    <meta name="title" content="Merkei Solutions | Strategic Infrastructure Specialist">
+    <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal. ISO 27001 aligned infrastructure and automation.">
     <meta name="author" content="Vinod Lakmal">
 
     <meta property="og:type" content="website">
@@ -14,263 +15,191 @@
     <meta property="og:description" content="Leading the transition to resilient multicloud architectures and secure enterprise communication systems.">
     <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
 
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://merkeisolutions.com/">
+    <meta property="twitter:title" content="Merkei Solutions | Strategic Infrastructure Specialist">
+    <meta property="twitter:description" content="Architecting resilient systems, secure multicloud networking, and communication frameworks.">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --primary:#0062ff;
-            --secondary:#00c2ff;
-            --bg:#020617;
+            --primary: #0062ff;
+            --secondary: #00c2ff;
+            --bg: #020617;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
         }
 
         body {
-            margin:0;
-            font-family:'Inter', sans-serif;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, #0a192f, #020617);
-            color:white;
-            overflow-x:hidden;
+            color: white;
+            overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
         /* NAVIGATION */
         nav {
-            display:flex;
-            justify-content:space-between;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding:20px 10%;
-            position:sticky;
-            top:0;
+            padding: 20px 10%;
+            position: sticky;
+            top: 0;
             backdrop-filter: blur(15px);
-            background:rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
-            font-size:1.6rem;
-            font-weight:bold;
+            font-size: 1.6rem;
+            font-weight: bold;
             letter-spacing: 1px;
-            background:linear-gradient(to right,var(--primary),var(--secondary));
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* HERO SECTION */
         header {
-            text-align:center;
-            padding:120px 10% 80px;
+            text-align: center;
+            padding: 120px 10% 80px;
         }
 
         header h1 {
-            font-size:3.5rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            background:linear-gradient(to right,#fff,#888);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1.2;
         }
 
         header p {
-            color:#aaa;
-            max-width:750px;
-            margin:auto;
+            color: #aaa;
+            max-width: 750px;
+            margin: auto;
             font-size: 1.15rem;
             line-height: 1.6;
         }
 
-        .btn-group { margin-top: 30px; }
+        .btn-group { margin-top: 40px; }
 
         .btn {
-            padding:14px 30px;
-            border-radius:8px;
-            text-decoration:none;
+            padding: 14px 35px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
-            display:inline-block;
+            display: inline-block;
         }
 
         .btn-primary {
-            background:linear-gradient(to right,var(--primary),var(--secondary));
-            color:white;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
             box-shadow: 0 4px 15px rgba(0, 98, 255, 0.4);
         }
 
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 98, 255, 0.6); }
 
         .btn-outline {
-            border:1px solid rgba(255,255,255,0.2);
-            color:white;
-            margin-left:15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            margin-left: 15px;
         }
 
-        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        .btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
 
         /* GLASS CARD EFFECT */
         .glass {
-            background:rgba(255,255,255,0.03);
-            border:1px solid rgba(255,255,255,0.08);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
             backdrop-filter: blur(12px);
-            border-radius:15px;
+            border-radius: 15px;
         }
 
-        /* SERVICES GRID - Tool-Agnostic Messaging */
-        .services { padding:100px 10%; text-align:center; }
+        /* SERVICES GRID */
+        .services { padding: 100px 10%; text-align: center; }
         .grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-            margin-top:50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
         }
 
-        .card { padding:35px; transition:0.4s ease; text-align: left; }
+        .card { padding: 35px; transition: 0.4s ease; text-align: left; }
         .card:hover {
-            transform:translateY(-10px);
-            background: rgba(255,255,255,0.07);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
             border-color: var(--secondary);
         }
         .card i { color: var(--secondary); margin-bottom: 20px; }
         .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
         .card p { color: #888; font-size: 0.95rem; line-height: 1.5; }
 
-        /* PROJECTS SECTION */
-        .projects { padding:80px 10%; text-align:center; background: rgba(0,0,0,0.2); }
-        .project-list { max-width: 850px; margin: 40px auto; }
+        /* CASE STUDIES SECTION */
+        .projects { padding: 80px 10%; text-align: center; background: rgba(0, 0, 0, 0.2); }
+        .project-list { max-width: 900px; margin: 40px auto; }
         .project {
-            margin-bottom:15px;
-            padding:20px;
+            margin-bottom: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .project-title {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
             gap: 15px;
-            text-align: left;
-            font-size: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        .project i { color: #2ecc71; }
+        .project-title i { color: #2ecc71; }
+        .project p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-left: 35px; }
+        .tech-tags { margin-left: 35px; margin-top: 15px; }
+        .tag {
+            font-size: 0.75rem;
+            background: rgba(0, 98, 255, 0.15);
+            color: var(--secondary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+            border: 1px solid rgba(0, 194, 255, 0.2);
+        }
 
         /* CONTACT FORM */
-        .contact { padding:100px 10%; }
-        .form-box { max-width:600px; margin:auto; padding:40px; }
+        .contact { padding: 100px 10%; }
+        .form-box { max-width: 600px; margin: auto; padding: 45px; }
         input, textarea {
-            width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);
-            background:rgba(0,0,0,0.3); color:white; box-sizing: border-box; font-family: inherit;
+            width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3); color: white; box-sizing: border-box; font-family: inherit;
         }
-        input:focus, textarea:focus { outline: 2px solid var(--primary); background: rgba(0,0,0,0.5); }
+        input:focus, textarea:focus { outline: 2px solid var(--primary); background: rgba(0, 0, 0, 0.5); }
         button {
-            width:100%; padding:16px; background:linear-gradient(to right,var(--primary),var(--secondary));
-            border:none; color:white; font-weight:bold; border-radius:8px; cursor:pointer; font-size: 1rem; transition: 0.3s;
+            width: 100%; padding: 16px; background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none; color: white; font-weight: bold; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: 0.3s;
         }
-        button:hover { opacity: 0.9; transform: scale(1.01); }
+        button:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* ANIMATION */
-        .fade { opacity:0; transform:translateY(30px); transition: 0.8s ease-out; }
-        .fade.show { opacity:1; transform:translateY(0); }
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #555;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
 
-        /* FIXED WHATSAPP */
+        /* WHATSAPP */
         .whatsapp {
-            position:fixed; bottom:30px; right:30px; background:#25D366; color: white;
+            position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white;
             width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
-            border-radius:50%; font-size: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-radius: 50%; font-size: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             z-index: 1000; transition: 0.3s; text-decoration: none;
         }
-        .whatsapp:hover { transform: scale(1.1); background: #20ba5a; }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            nav { padding: 20px 5%; }
-        }
-    </style>
-</head>
-
-<body>
-
-<nav>
-    <div class="logo">MERKEI SOLUTIONS</div>
-    <div style="color: #888; font-size: 0.9rem;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
-</nav>
-
-<header>
-    <div class="fade show">
-        <h1>Strategic IT Infrastructure & <br>Enterprise Multicloud Solutions</h1>
-        <p>Architecting resilient systems, secure multicloud networking, and communication frameworks aligned with ISO 27001 standards for modern enterprises.</p>
-        <div class="btn-group">
-            <a href="#contact" class="btn btn-primary">Initiate Project</a>
-            <a href="#services" class="btn btn-outline">Consult Expertise</a>
-        </div>
-    </div>
-</header>
-
-<section id="services" class="services">
-    <h2 class="fade">Core Expertise & Solutions</h2>
-    <div class="grid">
-        <div class="card glass fade">
-            <i class="fas fa-microchip fa-2x"></i>
-            <h3>Systems Orchestration</h3>
-            <p>Enterprise server management, Docker containerization, and proactive hybrid-infrastructure monitoring for critical 24/7 uptime.</p>
-        </div>
-        <div class="card glass fade">
-            <i class="fas fa-network-wired fa-2x"></i>
-            <h3>Multicloud Architecting</h3>
-            <p>Designing secure, interconnected cloud environments across major platforms with specialized multicloud networking and cost governance.</p>
-        </div>
-        <div class="card glass fade">
-            <i class="fas fa-lock fa-2x"></i>
-            <h3>Secure Messaging Gateways</h3>
-            <p>Carrier-grade messaging infrastructures for high-throughput OTP delivery and mission-critical financial alert systems.</p>
-        </div>
-        <div class="card glass fade">
-            <i class="fas fa-shield-halved fa-2x"></i>
-            <h3>Security Compliance</h3>
-            <p>ISO 27001 aligned security frameworks, zero-trust architectures, and robust infrastructure hardening for data integrity.</p>
-        </div>
-    </div>
-</section>
-
-<section class="projects">
-    <h2 class="fade">Proven Strategic Impact</h2>
-    <div class="project-list fade">
-        <div class="project glass"><i class="fas fa-check-circle"></i> High-Availability Unified IP-PBX Telephony Architectures</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Secure Messaging Gateway Integration for Financial & OTP Services</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Resilient Hybrid-Cloud Migration & Infrastructure Governance</div>
-        <div class="project glass"><i class="fas fa-check-circle"></i> Developed a Scalable, Containerized Multi-Rater Assessment Platform</div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <div class="form-box glass fade">
-        <h2 style="text-align:center; margin-bottom: 30px;">Build a Resilient Future</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Business Email" required>
-            <textarea name="message" rows="5" placeholder="Outline your requirements (Infrastructure, Cloud Strategy, Messaging, etc.)..." required></textarea>
-            <button type="submit">Submit Solution Proposal</button>
-        </form>
-    </div>
-</section>
-
-<footer style="text-align:center; padding:40px; color:#444; border-top: 1px solid rgba(255,255,255,0.05);">
-    © 2026 Merkei Solutions. All Rights Reserved.
-</footer>
-
-<a href="https://wa.me/94701113511" target="_blank" class="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-    const faders = document.querySelectorAll('.fade');
-    const appearOptions = { threshold: 0.3 };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('show');
-            appearOnScroll.unobserve(entry.target);
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
-
-</body>
-</html>
