@@ -68,7 +68,7 @@
             Enterprise Grade IT Partner
         </p>
         <h1 class="mt-6 text-4xl font-extrabold leading-tight text-transparent bg-gradient-to-br from-white to-slate-400 bg-clip-text sm:text-5xl lg:text-7xl">
-            Strategic IT Infrastructure &amp;<br class="hidden sm:block"> Multicloud Solutions
+            Strategic IT Infrastructure &<br class="hidden sm:block"> Multicloud Solutions
         </h1>
         <p class="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
             Architecting resilient, secure, and automated multicloud environments aligned with ISO 27001 standards. Tailored solutions for modern enterprise demands.
@@ -216,8 +216,8 @@
         const toggleMenu = () => {
             const isHidden = mobileMenu.classList.contains("hidden");
             mobileMenu.classList.toggle("hidden");
-            openIcon.classList.toggle("hidden", !isHidden);
-            closeIcon.classList.toggle("hidden", isHidden);
+            openIcon.classList.toggle("hidden", isHidden);
+            closeIcon.classList.toggle("hidden", !isHidden);
             menuToggle.setAttribute("aria-expanded", String(isHidden));
         };
 
