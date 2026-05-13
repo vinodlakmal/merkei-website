@@ -49,7 +49,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- අලුතින් එකතු කළ Navigation Links CSS --- */
         .nav-links {
             list-style: none;
             display: flex;
@@ -65,8 +64,8 @@
         }
         .nav-links a:hover {
             color: var(--secondary);
+            text-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
         }
-        /* ------------------------------------------- */
 
         header {
             text-align: center;
@@ -89,6 +88,13 @@
             font-size: 1.25rem;
         }
 
+        /* --- අලුත් බොත්තම් Animation එක --- */
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px rgba(0, 98, 255, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(0, 194, 255, 0.7); }
+            100% { box-shadow: 0 4px 15px rgba(0, 98, 255, 0.3); }
+        }
+
         .btn {
             display: inline-block;
             padding: 16px 40px;
@@ -98,12 +104,16 @@
             border-radius: 8px;
             font-weight: bold;
             margin-top: 40px;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 98, 255, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2.5s infinite; /* Animation එක යොදා ඇත */
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 98, 255, 0.5); }
+        .btn:hover { 
+            transform: translateY(-5px) scale(1.05); 
+            box-shadow: 0 10px 30px rgba(0, 194, 255, 0.8); 
+            animation: none; /* Hover කරද්දී Pulse වීම නවතී */
+        }
 
-        /* TECH STACK SECTION */
+        /* --- TECH STACK SECTION සහ Floating Animations --- */
         .tech-stack {
             padding: 60px 10%;
             text-align: center;
@@ -120,8 +130,34 @@
             font-size: 1.1rem;
             color: #888;
         }
-        .tech-icons span { display: flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .tech-icons span:hover { color: var(--secondary); transform: scale(1.1); }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .tech-icons span { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            transition: 0.3s; 
+        }
+        
+        /* අයිකන් එකින් එක වෙනස් වෙලාවන් වලට පාවීම */
+        .tech-icons span:nth-child(1) { animation: float 3s ease-in-out infinite; }
+        .tech-icons span:nth-child(2) { animation: float 3.5s ease-in-out infinite 0.5s; }
+        .tech-icons span:nth-child(3) { animation: float 3s ease-in-out infinite 1s; }
+        .tech-icons span:nth-child(4) { animation: float 3.2s ease-in-out infinite 1.5s; }
+        .tech-icons span:nth-child(5) { animation: float 3.5s ease-in-out infinite 0.2s; }
+        .tech-icons span:nth-child(6) { animation: float 3s ease-in-out infinite 0.8s; }
+
+        .tech-icons span:hover { 
+            color: var(--secondary); 
+            transform: scale(1.2) !important; 
+            animation-play-state: paused; /* Hover කරද්දී පාවීම නවතී */
+            text-shadow: 0 0 15px rgba(0, 194, 255, 0.4);
+        }
         .tech-icons i { font-size: 2rem; }
 
         /* SERVICES */
@@ -139,8 +175,8 @@
             transition: 0.4s;
         }
         .card:hover { border-color: var(--secondary); background: rgba(255,255,255,0.07); transform: translateY(-10px); }
-        .card i { color: var(--secondary); font-size: 2.8rem; margin-bottom: 25px; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .card i { color: var(--secondary); font-size: 2.8rem; margin-bottom: 25px; transition: transform 0.4s ease; }
+        .card:hover i { transform: scale(1.1) rotate(5deg); }
 
         /* WHY US SECTION */
         .why-us {
@@ -151,7 +187,8 @@
             align-items: center;
         }
         .why-us h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .why-box { margin-bottom: 25px; display: flex; gap: 20px; }
+        .why-box { margin-bottom: 25px; display: flex; gap: 20px; transition: transform 0.3s; }
+        .why-box:hover { transform: translateX(10px); }
         .why-box i { color: #2ecc71; font-size: 1.5rem; margin-top: 5px; }
 
         /* PORTFOLIO */
@@ -167,7 +204,11 @@
             border-left: 6px solid var(--primary);
             transition: 0.3s;
         }
-        .project-card:hover { background: rgba(255,255,255,0.05); }
+        .project-card:hover { 
+            background: rgba(255,255,255,0.05); 
+            border-left: 6px solid var(--secondary);
+            transform: translateX(5px);
+        }
         .tag {
             font-size: 0.8rem;
             background: rgba(0, 98, 255, 0.15);
@@ -178,7 +219,9 @@
             border: 1px solid rgba(0, 194, 255, 0.2);
             display: inline-block;
             margin-top: 10px;
+            transition: all 0.3s;
         }
+        .tag:hover { background: var(--secondary); color: #000; font-weight: bold; }
 
         /* CONTACT */
         .contact-section { padding: 100px 10%; }
@@ -194,12 +237,15 @@
             width: 100%; padding: 18px; margin-bottom: 25px; background: rgba(0,0,0,0.4);
             border: 1px solid var(--border); color: white; border-radius: 10px;
             box-sizing: border-box; font-family: inherit; font-size: 1rem;
+            transition: border 0.3s;
         }
-        input:focus, textarea:focus { outline: none; border-color: var(--primary); background: rgba(0,0,0,0.6); }
+        input:focus, textarea:focus { outline: none; border-color: var(--secondary); background: rgba(0,0,0,0.6); }
         button {
             width: 100%; padding: 20px; background: linear-gradient(to right, var(--primary), var(--secondary));
             border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 1.1rem;
+            transition: 0.3s;
         }
+        button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 194, 255, 0.5); }
 
         footer { text-align: center; padding: 60px; color: #555; border-top: 1px solid var(--border); font-size: 0.95rem; }
 
@@ -235,6 +281,7 @@
         <i class="fa fa-envelope"></i> info@merkeisolutions.com
     </div>
 </nav>
+
 <header>
     <h1>Strategic IT Infrastructure & <br>Multicloud Solutions</h1>
     <p>Architecting resilient, secure, and automated multicloud environments aligned with ISO 27001 standards. Tailored solutions for modern enterprise demands.</p>
