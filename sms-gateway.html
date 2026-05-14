@@ -3,75 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Enterprise SMS Gateway | Merkei Solutions</title>
+    <title>Enterprise SMS Gateway | Merkei Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --primary: #0062ff; --secondary: #00c2ff; --bg: #020617; --border: rgba(255, 255, 255, 0.1); }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: radial-gradient(circle at top, #0a192f, #020617); color: white; line-height: 1.6; }
+        :root {
+            --primary: #0062ff;
+            --secondary: #00c2ff;
+            --bg: #020617;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
+        }
         
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid var(--border); }
-        .logo { font-size: 1.6rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;}
+        body {
+            margin: 0; font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #0a192f, #020617);
+            color: white; line-height: 1.6; scroll-behavior: smooth;
+            /* --- මවුස් එක Type කරන ඉර (Cursor) නැති කිරීම --- */
+            cursor: default;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
         
-        /* Case Study Content CSS */
-        .case-study-container { max-width: 800px; margin: 80px auto; padding: 0 20px; }
-        .back-link { color: var(--secondary); text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 30px; transition: 0.3s; }
-        .back-link:hover { transform: translateX(-5px); }
+        /* Links සහ Buttons වලට පමණක් 'අතක' සලකුණ යෙදීම */
+        a, button { cursor: pointer; }
         
-        h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
-        .tags { margin-bottom: 40px; }
-        .tag { font-size: 0.85rem; background: rgba(0, 98, 255, 0.15); padding: 8px 16px; border-radius: 6px; margin-right: 10px; color: var(--secondary); border: 1px solid rgba(0, 194, 255, 0.2); display: inline-block; }
+        nav { padding: 20px 10%; background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+        .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
         
-        .content-section { background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 15px; border: 1px solid var(--border); margin-bottom: 30px; }
-        .content-section h2 { color: var(--secondary); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 20px; }
-        ul { padding-left: 20px; color: #ccc; }
-        ul li { margin-bottom: 10px; }
+        .container { max-width: 900px; margin: 50px auto; padding: 40px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; line-height: 1.2; }
+        h2 { color: #fff; margin-top: 45px; border-bottom: 1px solid var(--border); padding-bottom: 10px; font-size: 1.8rem; }
+        p { color: #bbb; font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
+        ul { margin-left: 20px; line-height: 1.9; color: #bbb; font-size: 1.1rem; margin-bottom: 25px; }
+        strong { color: #fff; }
         
-        footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid var(--border); font-size: 0.95rem; margin-top: 80px;}
+        .tag { font-size: 0.85rem; background: rgba(0, 98, 255, 0.15); padding: 8px 16px; border-radius: 6px; margin-right: 10px; color: var(--secondary); border: 1px solid rgba(0, 194, 255, 0.2); display: inline-block; margin-bottom: 25px; font-weight: bold; }
+        
+        .back-btn { display: inline-block; margin-bottom: 25px; color: var(--secondary); text-decoration: none; font-weight: bold; transition: 0.3s; font-size: 1.1rem; }
+        .back-btn:hover { color: white; transform: translateX(-5px); text-shadow: 0 0 10px rgba(0,194,255,0.5); }
+        
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); margin-top: 50px; color: #555; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="index.html" class="logo">MERKEI SOLUTIONS</a>
-    <div style="font-size: 0.9rem; color: #aaa;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
 </nav>
 
-<div class="case-study-container">
-    <a href="index.html#case-studies" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+<div class="container">
+    <a href="index.html#case-studies" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
     
     <h1>Enterprise SMS Gateway Optimization</h1>
-    <div class="tags">
+    <div>
         <span class="tag">Jasmin SMS</span> <span class="tag">Docker</span> <span class="tag">SMPP</span> <span class="tag">Azure</span>
     </div>
 
-    <div class="content-section">
-        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
-        <p>Our client, a leading financial institution, was facing severe latency and throughput issues with their existing SMS notification system. During peak hours, critical OTPs (One-Time Passwords) and transaction alerts were delayed, leading to poor customer experience and security risks. The legacy system was not scalable and lacked proper failover mechanisms.</p>
-    </div>
+    <h2>The Challenge</h2>
+    <p>Our client, a leading financial institution, was facing severe latency and throughput issues with their existing SMS notification system. During peak hours, critical OTPs (One-Time Passwords) and transaction alerts were delayed, leading to poor customer experience and security risks. The legacy system was not scalable and lacked proper failover mechanisms.</p>
 
-    <div class="content-section">
-        <h2><i class="fas fa-cogs"></i> Our Solution</h2>
-        <p>Merkei Solutions completely re-architected the delivery infrastructure focusing on high availability and speed:</p>
-        <ul>
-            <li><strong>Containerization:</strong> Deployed a carrier-grade <em>Jasmin SMS Gateway</em> utilizing Docker for rapid deployment and easy scaling.</li>
-            <li><strong>Infrastructure:</strong> Hosted on a highly available <em>Microsoft Azure</em> environment with automated load balancing.</li>
-            <li><strong>Connectivity:</strong> Established low-latency SMPP connections directly with major telecom carriers.</li>
-            <li><strong>Monitoring:</strong> Integrated 24/7 proactive monitoring to detect and resolve routing issues before they impact delivery.</li>
-        </ul>
-    </div>
+    <h2>Our Solution</h2>
+    <p>We completely re-architected the delivery infrastructure, focusing on high availability, speed, and seamless scaling:</p>
+    <ul>
+        <li><strong>Containerization:</strong> Deployed a carrier-grade Jasmin SMS Gateway utilizing Docker for rapid deployment and easy, isolated scaling.</li>
+        <li><strong>Cloud Infrastructure:</strong> Hosted the core system on a highly available Microsoft Azure environment, integrated with automated load balancing.</li>
+        <li><strong>Low-Latency Connectivity:</strong> Established direct, high-speed SMPP connections with major telecom carriers to bypass intermediate routing delays.</li>
+        <li><strong>Proactive Monitoring:</strong> Integrated 24/7 continuous monitoring to detect and automatically resolve routing bottlenecks before they impact delivery.</li>
+    </ul>
 
-    <div class="content-section">
-        <h2><i class="fas fa-chart-line"></i> The Results</h2>
-        <p>The strategic deployment yielded immediate and measurable improvements to the client's operations:</p>
-        <ul>
-            <li><strong>3x Higher Throughput:</strong> System now handles thousands of messages per second without bottlenecking.</li>
-            <li><strong>Sub-second Latency:</strong> 99% of OTPs are now delivered in under 2 seconds.</li>
-            <li><strong>99.99% Uptime:</strong> Achieved enterprise-grade reliability with automated failovers.</li>
-            <li><strong>Cost Efficiency:</strong> Reduced operational and routing costs by optimizing the multicloud structure.</li>
-        </ul>
-    </div>
+    <h2>The Outcome & Value Delivered</h2>
+    <p>The strategic deployment provided the client with a robust, enterprise-ready messaging infrastructure designed for maximum reliability:</p>
+    <ul>
+        <li><strong>High-Throughput Architecture:</strong> Engineered the core system to comfortably handle thousands of concurrent messages per second without bottlenecking.</li>
+        <li><strong>Optimized for Low Latency:</strong> Structured the routing and connectivity to support rapid, seamless delivery of time-sensitive alerts and OTPs.</li>
+        <li><strong>High-Availability Design:</strong> Built with containerized resilience and automated failover capabilities to ensure continuous, uninterrupted operations.</li>
+        <li><strong>Cost-Optimized Infrastructure:</strong> Architected a streamlined multicloud environment that maximizes resource efficiency and minimizes unnecessary routing overhead.</li>
+    </ul>
 </div>
 
 <footer>
