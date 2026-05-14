@@ -105,12 +105,12 @@
             font-weight: bold;
             margin-top: 40px;
             transition: all 0.3s ease;
-            animation: pulse 2.5s infinite; /* Animation එක යොදා ඇත */
+            animation: pulse 2.5s infinite;
         }
         .btn:hover { 
             transform: translateY(-5px) scale(1.05); 
             box-shadow: 0 10px 30px rgba(0, 194, 255, 0.8); 
-            animation: none; /* Hover කරද්දී Pulse වීම නවතී */
+            animation: none; 
         }
 
         /* --- TECH STACK SECTION සහ Floating Animations --- */
@@ -144,7 +144,6 @@
             transition: 0.3s; 
         }
         
-        /* අයිකන් එකින් එක වෙනස් වෙලාවන් වලට පාවීම */
         .tech-icons span:nth-child(1) { animation: float 3s ease-in-out infinite; }
         .tech-icons span:nth-child(2) { animation: float 3.5s ease-in-out infinite 0.5s; }
         .tech-icons span:nth-child(3) { animation: float 3s ease-in-out infinite 1s; }
@@ -155,7 +154,7 @@
         .tech-icons span:hover { 
             color: var(--secondary); 
             transform: scale(1.2) !important; 
-            animation-play-state: paused; /* Hover කරද්දී පාවීම නවතී */
+            animation-play-state: paused; 
             text-shadow: 0 0 15px rgba(0, 194, 255, 0.4);
         }
         .tech-icons i { font-size: 2rem; }
@@ -177,6 +176,8 @@
         .card:hover { border-color: var(--secondary); background: rgba(255,255,255,0.07); transform: translateY(-10px); }
         .card i { color: var(--secondary); font-size: 2.8rem; margin-bottom: 25px; transition: transform 0.4s ease; }
         .card:hover i { transform: scale(1.1) rotate(5deg); }
+        .card ul { margin: 15px 0 0; padding-left: 18px; color: #666; font-size: 0.88rem; line-height: 1.9; }
+        .card:hover ul li { color: #888; }
 
         /* WHY US SECTION */
         .why-us {
@@ -315,6 +316,18 @@
         <h3>Secure Messaging</h3>
         <p>Carrier-grade Jasmin SMS Gateway deployments for mission-critical financial alerts and global OTP services.</p>
     </div>
+    <div class="card">
+        <i class="fas fa-building"></i>
+        <h3>Office IT Infrastructure</h3>
+        <p>Complete office environments built from scratch — physical cabling to cloud-connected servers, fully managed and documented.</p>
+        <ul>
+            <li>Domain & DNS setup (Cloudflare, SPF/DKIM)</li>
+            <li>Email servers — M365 or self-hosted</li>
+            <li>File & data servers (NAS, AD, backup)</li>
+            <li>Structured cabling & network design</li>
+            <li>VoIP / 3CX PBX deployment</li>
+        </ul>
+    </div>
 </section>
 
 <section class="why-us">
@@ -380,6 +393,23 @@
 
         <div>
             <span class="tag">Office 365</span> <span class="tag">Cloud Networking</span> <span class="tag">Domain Management</span> <span class="tag">Infrastructure</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h3>Corporate Office IT — Physical & Digital Infrastructure Deployment</h3>
+        <p>Delivered a complete on-premise and hybrid office environment for a mid-sized enterprise. Scope covered structured Cat6 cabling across two floors, rack and patch panel installation, FortiGate firewall with VLAN segmentation, Windows Server Active Directory with GPO enforcement, Microsoft 365 mail with DMARC hardening, Synology NAS with Azure Backup, and 3CX VoIP with SIP trunk provisioning. Full documentation and staff onboarding included at handover.</p>
+        
+        <a href="office-setup.html" style="color: var(--secondary); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; margin-bottom: 20px; transition: 0.3s;">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+
+        <div>
+            <span class="tag">Structured Cabling</span>
+            <span class="tag">FortiGate</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Microsoft 365</span>
+            <span class="tag">NAS / Azure Backup</span>
+            <span class="tag">3CX VoIP</span>
+            <span class="tag">VLAN Design</span>
         </div>
     </div>
 </section>
