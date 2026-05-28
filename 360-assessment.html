@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure 360-Assessment Platform | Merkei Solutions</title>
     <meta name="description" content="Merkei Solutions architected a high-availability 360-degree assessment platform with Cloudflare Zero Trust and Nginx, securely handling thousands of concurrent enterprise users.">
-    <link rel="canonical" href="https://merkeisolutions.com/360-assessment.html">
+    <link rel="canonical" href="https://merkeisolutions.com/360-assessment">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://merkeisolutions.com/360-assessment.html">
+    <meta property="og:url" content="https://merkeisolutions.com/360-assessment">
     <meta property="og:title" content="Secure 360-Assessment Platform Deployment | Merkei Solutions">
     <meta property="og:description" content="High-availability infrastructure for 360-degree HR assessments. Cloudflare Zero Trust, Docker, and Nginx handling thousands of concurrent users securely.">
     <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+
     <style>
         :root {
             --primary: #0062ff;
@@ -26,18 +26,17 @@
             --card-bg: rgba(255, 255, 255, 0.04);
             --border: rgba(255, 255, 255, 0.1);
         }
-        
+
         body {
             margin: 0; font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, #0a192f, #020617);
             color: white; line-height: 1.6; scroll-behavior: smooth;
-            /* --- මවුස් එක Type කරන ඉර (Cursor) නැති කිරීම --- */
             cursor: default;
             -webkit-user-select: none;
             -ms-user-select: none;
             user-select: none;
         }
-        
+
         a, button { cursor: pointer; }
         nav { padding: 20px 10%; background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(12px); }
         .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
@@ -55,17 +54,83 @@
             .nav-links li a { display: block; padding: 12px 10%; }
             .nav-cta { display: none; }
         }
-        
+
         .container { max-width: 900px; margin: 50px auto; padding: 40px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         h1 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; line-height: 1.2; }
         h2 { color: #fff; margin-top: 45px; border-bottom: 1px solid var(--border); padding-bottom: 10px; font-size: 1.8rem; }
         p { color: #bbb; font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
         ul { margin-left: 20px; line-height: 1.9; color: #bbb; font-size: 1.1rem; margin-bottom: 25px; }
         strong { color: #fff; }
-        
+
         .tag { font-size: 0.85rem; background: rgba(0, 98, 255, 0.15); padding: 8px 16px; border-radius: 6px; margin-right: 10px; color: var(--secondary); border: 1px solid rgba(0, 194, 255, 0.2); display: inline-block; margin-bottom: 25px; font-weight: bold; }
-        
+
         .back-btn { display: inline-block; margin-bottom: 25px; color: var(--secondary); text-decoration: none; font-weight: bold; transition: 0.3s; font-size: 1.1rem; }
         .back-btn:hover { color: white; transform: translateX(-5px); text-shadow: 0 0 10px rgba(0,194,255,0.5); }
-        
-        footer { text-align: center; padding: 40px; border-top
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); margin-top: 50px; color: #555; }
+    </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+    <a href="index.html" class="logo">MERKEI SOLUTIONS</a>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+<script>
+    (function() {
+        var btn = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-links');
+        btn.addEventListener('click', function() {
+            var open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+</script>
+
+<div class="container">
+    <a href="index.html#case-studies" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <h1>Secure 360-Assessment Platform Deployment</h1>
+    <div>
+        <span class="tag">Cloudflare</span> <span class="tag">Docker</span> <span class="tag">Nginx</span> <span class="tag">WAF Security</span>
+    </div>
+
+    <h2>The Challenge</h2>
+    <p>The client required a highly secure, scalable platform to conduct 360-degree performance assessments for large enterprises. During peak assessment periods, the system needed to handle thousands of concurrent users submitting highly sensitive HR data without any performance degradation or security vulnerabilities.</p>
+
+    <h2>Our Solution</h2>
+    <p>We designed a robust, high-availability architecture prioritizing zero-trust security and seamless load distribution:</p>
+    <ul>
+        <li><strong>Web Application Firewall (WAF):</strong> Integrated Cloudflare Zero Trust to block malicious traffic, DDoS attacks, and unauthorized access attempts.</li>
+        <li><strong>Load Balancing:</strong> Deployed Nginx as a reverse proxy to evenly distribute massive traffic spikes across multiple application nodes.</li>
+        <li><strong>Container Orchestration:</strong> Utilized Docker to isolate application environments, ensuring that any localized failure would not compromise the entire system.</li>
+        <li><strong>Data Security:</strong> Enforced end-to-end encryption and strict ISO 27001 compliant access policies.</li>
+    </ul>
+
+    <h2>The Outcome &amp; Value Delivered</h2>
+    <p>The strategic deployment provided the client with a robust, enterprise-ready infrastructure designed for maximum reliability and scalability:</p>
+    <ul>
+        <li><strong>High-Concurrency Architecture:</strong> Engineered the core system to comfortably handle high volumes of concurrent assessment submissions without bottlenecking.</li>
+        <li><strong>Enterprise-Grade Data Protection:</strong> Structured the routing and WAF rules to ensure highly sensitive HR data remains completely secure and isolated.</li>
+        <li><strong>High-Availability Design:</strong> Built with containerized resilience and automated failover capabilities to ensure continuous operations during peak review seasons.</li>
+        <li><strong>Cost-Optimized Infrastructure:</strong> Architected a streamlined multicloud environment that maximizes resource efficiency and minimizes unnecessary cloud overhead.</li>
+    </ul>
+</div>
+
+<footer>
+    &copy; 2026 Merkei Solutions. All Rights Reserved. <br>
+    <span style="font-size: 0.85rem; color: #444;">Strategically Designed by Vinod Lakmal.</span>
+</footer>
+
+<a href="https://wa.me/94701113511" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

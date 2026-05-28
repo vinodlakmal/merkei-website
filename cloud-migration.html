@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Infrastructure Migration | Merkei Solutions</title>
     <meta name="description" content="Merkei Solutions migrated a legacy on-premise environment to Microsoft Office 365 and Azure AD with zero downtime, enforcing SPF/DKIM/DMARC and encrypted cloud backups.">
-    <link rel="canonical" href="https://merkeisolutions.com/cloud-migration.html">
+    <link rel="canonical" href="https://merkeisolutions.com/cloud-migration">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://merkeisolutions.com/cloud-migration.html">
-    <meta property="og:title" content="Cloud Infrastructure & Workspace Migration | Merkei Solutions">
+    <meta property="og:url" content="https://merkeisolutions.com/cloud-migration">
+    <meta property="og:title" content="Cloud Infrastructure &amp; Workspace Migration | Merkei Solutions">
     <meta property="og:description" content="End-to-end migration from legacy on-premise to Office 365 and Azure AD. Zero downtime, hardened email security, and automated encrypted cloud backups.">
     <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -43,4 +43,62 @@
         p { color: #bbb; font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
         ul { margin-left: 20px; line-height: 1.9; color: #bbb; font-size: 1.1rem; margin-bottom: 25px; }
         strong { color: #fff; }
-        .tag { font-size: 0.85rem; background: rgba(0, 98, 255,
+        .tag { font-size: 0.85rem; background: rgba(0, 98, 255, 0.15); padding: 8px 16px; border-radius: 6px; margin-right: 10px; color: var(--secondary); border: 1px solid rgba(0, 194, 255, 0.2); display: inline-block; margin-bottom: 25px; font-weight: bold; }
+        .back-btn { display: inline-block; margin-bottom: 25px; color: var(--secondary); text-decoration: none; font-weight: bold; transition: 0.3s; font-size: 1.1rem; }
+        .back-btn:hover { color: white; transform: translateX(-5px); text-shadow: 0 0 10px rgba(0,194,255,0.5); }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); margin-top: 50px; color: #555; }
+    </style>
+</head>
+<body>
+<nav aria-label="Main navigation">
+    <a href="index.html" class="logo">MERKEI SOLUTIONS</a>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+<script>
+    (function() {
+        var btn = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-links');
+        btn.addEventListener('click', function() {
+            var open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+</script>
+<div class="container">
+    <a href="index.html#case-studies" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1>Cloud Infrastructure &amp; Workspace Migration</h1>
+    <div>
+        <span class="tag">Office 365</span> <span class="tag">Cloud Networking</span> <span class="tag">Azure AD</span> <span class="tag">Cloud Security</span>
+    </div>
+    <h2>The Challenge</h2>
+    <p>The client was heavily reliant on aging, legacy on-premise servers which caused frequent downtime, data silos, and security vulnerabilities. They required a seamless transition to a modern, secure cloud workspace without disrupting their daily corporate operations.</p>
+    <h2>Our Solution</h2>
+    <p>We architected a comprehensive, end-to-end migration to a fully cloud-native environment:</p>
+    <ul>
+        <li><strong>Identity Management:</strong> Implemented Azure Active Directory (Azure AD) for secure, centralized user access and identity governance.</li>
+        <li><strong>Workspace Modernization:</strong> Transitioned email and data to Microsoft Office 365, configuring SharePoint for seamless internal collaboration.</li>
+        <li><strong>Email Security:</strong> Hardened mail servers using strict SPF, DKIM, and DMARC policies to prevent spoofing and phishing attacks.</li>
+        <li><strong>Automated Backups:</strong> Deployed secure, encrypted cloud backups ensuring business continuity in the event of data loss.</li>
+    </ul>
+    <h2>The Outcome &amp; Value Delivered</h2>
+    <p>The strategic migration transformed the client's operational efficiency and security posture:</p>
+    <ul>
+        <li><strong>Zero Downtime Operations:</strong> Eliminated hardware-related outages, achieving a 99.9% uptime SLA through resilient cloud hosting.</li>
+        <li><strong>Reduced IT Overhead:</strong> Slashed maintenance costs and electricity usage by retiring outdated physical servers.</li>
+        <li><strong>Seamless Remote Work:</strong> Enabled employees to securely access corporate data from anywhere via zero-trust cloud networking.</li>
+    </ul>
+</div>
+<footer>&copy; 2026 Merkei Solutions. All Rights Reserved. <br>
+    <span style="font-size: 0.85rem; color: #444;">Strategically Designed by Vinod Lakmal.</span>
+</footer>
+<a href="https://wa.me/94701113511" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+</body>
+</html>
