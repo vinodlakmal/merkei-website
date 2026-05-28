@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Infrastructure Migration | Merkei Solutions</title>
+    <meta name="description" content="Merkei Solutions migrated a legacy on-premise environment to Microsoft Office 365 and Azure AD with zero downtime, enforcing SPF/DKIM/DMARC and encrypted cloud backups.">
+    <link rel="canonical" href="https://merkeisolutions.com/cloud-migration.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://merkeisolutions.com/cloud-migration.html">
+    <meta property="og:title" content="Cloud Infrastructure & Workspace Migration | Merkei Solutions">
+    <meta property="og:description" content="End-to-end migration from legacy on-premise to Office 365 and Azure AD. Zero downtime, hardened email security, and automated encrypted cloud backups.">
+    <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOK5iqA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         :root { --primary: #0062ff; --secondary: #00c2ff; --bg: #020617; --card-bg: rgba(255, 255, 255, 0.04); --border: rgba(255, 255, 255, 0.1); }
         body { margin: 0; font-family: 'Inter', sans-serif; background: radial-gradient(circle at top, #0a192f, #020617); color: white; line-height: 1.6; scroll-behavior: smooth; cursor: default; -webkit-user-select: none; -ms-user-select: none; user-select: none; }
         a, button { cursor: pointer; }
-        nav { padding: 20px 10%; background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+        nav { padding: 20px 10%; background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(12px); }
         .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--secondary); }
+        .nav-cta { padding: 8px 20px; background: linear-gradient(to right, var(--primary), var(--secondary)); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; white-space: nowrap; }
+        .nav-toggle { display: none; background: none; border: 1px solid var(--border); color: white; font-size: 1.4rem; padding: 6px 12px; border-radius: 6px; cursor: pointer; width: auto; }
+        .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000; transition: 0.3s; }
+        .whatsapp:hover { transform: scale(1.1) rotate(10deg); }
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 65px; left: 0; right: 0; background: rgba(0,0,0,0.95); border-bottom: 1px solid var(--border); padding: 10px 0; }
+            .nav-links.open { display: flex; }
+            .nav-links li a { display: block; padding: 12px 10%; }
+            .nav-cta { display: none; }
+        }
         .container { max-width: 900px; margin: 50px auto; padding: 40px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         h1 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; line-height: 1.2; }
         h2 { color: #fff; margin-top: 45px; border-bottom: 1px solid var(--border); padding-bottom: 10px; font-size: 1.8rem; }
@@ -25,7 +50,26 @@
     </style>
 </head>
 <body>
-<nav><a href="index.html" class="logo">MERKEI SOLUTIONS</a></nav>
+<nav aria-label="Main navigation">
+    <a href="index.html" class="logo">MERKEI SOLUTIONS</a>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+<script>
+    (function() {
+        var btn = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-links');
+        btn.addEventListener('click', function() {
+            var open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    })();
+</script>
 <div class="container">
     <a href="index.html#case-studies" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
     <h1>Cloud Infrastructure & Workspace Migration</h1>
@@ -50,6 +94,13 @@
         <li><strong>Seamless Remote Work:</strong> Enabled employees to securely access corporate data from anywhere via zero-trust cloud networking.</li>
     </ul>
 </div>
-<footer>© 2026 Merkei Solutions. All Rights Reserved.</footer>
+<footer>© 2026 Merkei Solutions. All Rights Reserved. <br>
+    <span style="font-size: 0.85rem; color: #444;">Strategically Designed by Vinod Lakmal.</span>
+</footer>
+
+<a href="https://wa.me/94701113511" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
 </body>
 </html>

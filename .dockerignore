@@ -1,0 +1,11 @@
+.git
+.github
+.gitignore
+*.md
+index_backup.html
+audit-report.md
+docker-compose.yml
+.env
+.env.*
+node_modules
+*.log

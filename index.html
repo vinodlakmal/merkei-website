@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merkei Solutions | Enterprise Cloud & Infrastructure Architect</title>
     <meta name="description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal. ISO 27001 aligned infrastructure.">
+    <link rel="canonical" href="https://merkeisolutions.com/">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://merkeisolutions.com/">
+    <meta property="og:title" content="Merkei Solutions | Enterprise Cloud & Infrastructure Architect">
+    <meta property="og:description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal. ISO 27001 aligned infrastructure.">
+    <meta property="og:image" content="https://merkeisolutions.com/images/og-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Merkei Solutions | Enterprise Cloud & Infrastructure Architect">
+    <meta name="twitter:description" content="Strategic Multicloud Architecting, Secure Messaging Gateways, and High-Availability Systems by Vinod Lakmal. ISO 27001 aligned infrastructure.">
+    <meta name="twitter:image" content="https://merkeisolutions.com/images/og-banner.jpg">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Merkei Solutions",
+      "url": "https://merkeisolutions.com",
+      "logo": "https://merkeisolutions.com/images/og-banner.jpg",
+      "email": "info@merkeisolutions.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "info@merkeisolutions.com"
+      }
+    }
+    </script>
+    <!-- Performance: preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOK5iqA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         :root {
             --primary: #0062ff;
@@ -71,20 +102,47 @@
         footer { text-align: center; padding: 60px; color: #555; border-top: 1px solid var(--border); font-size: 0.95rem; }
         .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000; transition: 0.3s; }
         .whatsapp:hover { transform: scale(1.1) rotate(10deg); }
-        @media (max-width: 992px) { .why-us { grid-template-columns: 1fr; } header h1 { font-size: 2.8rem; } .nav-links { display: none; } }
+        /* Mobile nav toggle */
+        .nav-toggle { display: none; background: none; border: 1px solid var(--border); color: white; font-size: 1.4rem; padding: 6px 12px; border-radius: 6px; cursor: pointer; width: auto; }
+        @media (max-width: 992px) {
+            .why-us { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.8rem; }
+            .nav-toggle { display: block; }
+            .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 70px; left: 0; right: 0; background: rgba(0,0,0,0.95); border-bottom: 1px solid var(--border); padding: 10px 0; }
+            .nav-links.open { display: flex; }
+            .nav-links li a { display: block; padding: 14px 10%; }
+            .nav-email { display: none; }
+        }
     </style>
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main navigation">
     <div class="logo">MERKEI SOLUTIONS</div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#case-studies">Case Studies</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-    <div style="font-size: 0.9rem; color: #aaa;"><i class="fa fa-envelope"></i> info@merkeisolutions.com</div>
+    <div class="nav-email" style="font-size: 0.9rem; color: #aaa;"><i class="fa fa-envelope" aria-hidden="true"></i> info@merkeisolutions.com</div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
+<script>
+    (function() {
+        var btn = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-links');
+        btn.addEventListener('click', function() {
+            var open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+        });
+        menu.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            });
+        });
+    })();
+</script>
 
 <header>
     <h1>Strategic IT Infrastructure & <br>Multicloud Solutions</h1>
@@ -219,9 +277,14 @@
     <form action="https://api.web3forms.com/submit" method="POST">
         <h2 style="text-align:center; margin-bottom: 40px;">Build a Resilient Future</h2>
         <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Business Email" required>
-        <textarea name="message" rows="5" placeholder="Tell us about your infrastructure goals..." required></textarea>
+        <!-- Web3Forms honeypot anti-spam -->
+        <input type="checkbox" name="botcheck" style="display:none">
+        <label for="contact-name" style="display:block; margin-bottom:6px; color:#aaa; font-size:0.9rem;">Full Name</label>
+        <input id="contact-name" type="text" name="name" placeholder="Full Name" required>
+        <label for="contact-email" style="display:block; margin-bottom:6px; color:#aaa; font-size:0.9rem;">Business Email</label>
+        <input id="contact-email" type="email" name="email" placeholder="Business Email" required>
+        <label for="contact-message" style="display:block; margin-bottom:6px; color:#aaa; font-size:0.9rem;">Message</label>
+        <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your infrastructure goals..." required></textarea>
         <button type="submit">Submit Solution Proposal</button>
     </form>
 </section>
@@ -231,8 +294,8 @@
     <span style="font-size: 0.85rem; color: #444;">Strategically Designed by Vinod Lakmal.</span>
 </footer>
 
-<a href="https://wa.me/94701113511" class="whatsapp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/94701113511" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
 </body>

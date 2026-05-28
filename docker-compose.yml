@@ -1,0 +1,24 @@
+services:
+  merkei-website:
+    image: ghcr.io/vinodlakmal/merkei-website:latest
+    container_name: merkei-website
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    # Reverse proxy use කරනවා නම් ports comment කරලා labels uncomment කරන්න:
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.merkei.rule=Host(`merkei.boh.city`)"
+    #   - "traefik.http.routers.merkei.entrypoints=websecure"
+    #   - "traefik.http.routers.merkei.tls.certresolver=letsencrypt"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/robots.txt"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
