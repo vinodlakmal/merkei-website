@@ -197,6 +197,21 @@ nav {
 .services-grid .card h3 { margin: 0 0 .6rem; font-size: 1.22rem; line-height: 1.3; }
 .services-grid .card p, .services-grid .card li { color: #405b70; font-size: .94rem; line-height: 1.65; }
 .services-grid .card ul { margin: 1rem 0 0; padding-left: 1.2rem; }
+.office-coverage {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem 1.5rem;
+    margin-top: .25rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #d6e3eb;
+    border-radius: .85rem;
+    background: #e6f0f5;
+}
+.office-coverage h3 { margin: .45rem 0 0; color: #15344a; font-size: 1.05rem; }
+.office-coverage ul { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.office-coverage li { padding: .42rem .75rem; border: 1px solid #c9dfe9; border-radius: 999px; background: white; color: #36566a; font-size: .84rem; line-height: 1.45; }
 
 .why-us {
     padding: 6.5rem max(5vw, calc((100vw - 1340px) / 2));
@@ -287,6 +302,8 @@ footer span { color: #8ca7ba !important; }
     .hero h1 { font-size: clamp(2.85rem, 10vw, 4rem); }
     .image-disclaimer { left: 5vw; right: auto; bottom: .6rem; }
     .services-grid, .portfolio { padding: 4rem 5vw; }
+    .office-coverage { grid-template-columns: 1fr; padding: 1.1rem; }
+    .office-coverage h3 { margin: 0; }
     .why-us, .contact-section { grid-template-columns: 1fr; gap: 1.7rem; padding: 4rem 5vw; }
     .why-us h2 { max-width: none; }
     .featured-project { grid-template-columns: 1fr; gap: 0; }
