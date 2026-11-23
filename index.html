@@ -114,17 +114,19 @@
             .nav-email { display: none; }
         }
     </style>
+    <link rel="stylesheet" href="site-redesign.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
 <nav aria-label="Main navigation">
-    <div class="logo">MERKEI SOLUTIONS</div>
+    <a class="logo" href="index.html" aria-label="Merkei Solutions home">MERKEI<span>SOLUTIONS</span></a>
     <ul class="nav-links" id="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#case-studies">Case Studies</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="nav-email" style="font-size: 0.9rem; color: #aaa;"><i class="fa fa-envelope" aria-hidden="true"></i> info@merkeisolutions.com</div>
+    <a class="nav-contact" href="#contact">Let's talk</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
 <script>
@@ -144,13 +146,24 @@
     })();
 </script>
 
-<header>
-    <h1>Strategic IT Infrastructure & <br>Multicloud Solutions</h1>
-    <p>Architecting resilient, secure, and automated multicloud environments aligned with ISO 27001 standards. Tailored solutions for modern enterprise demands.</p>
-    <a href="#contact" class="btn">Initiate Consultation</a>
+<main id="main-content">
+<header class="hero">
+    <img class="hero-photo" src="images/hero-infrastructure.webp" alt="" fetchpriority="high">
+    <div class="hero-content">
+        <p class="eyebrow">INFRASTRUCTURE / CLOUD / SECURE MESSAGING</p>
+        <h1>Infrastructure that<br><em>stays ready.</em></h1>
+        <p class="hero-lede">Design, build and support for resilient IT environments—from multicloud architecture to carrier-grade messaging.</p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn">Discuss your project</a>
+            <a href="#case-studies" class="text-link">Explore our work</a>
+        </div>
+        <p class="hero-caption">Enterprise infrastructure, shaped around your environment.</p>
+    </div>
+    <span class="image-disclaimer">Illustrative infrastructure image</span>
 </header>
 
-<section class="tech-stack">
+<section class="tech-stack" aria-label="Technology experience">
+    <p class="stack-label">TECHNOLOGY EXPERIENCE</p>
     <div class="tech-icons">
         <span><i class="fab fa-docker"></i> Docker</span>
         <span><i class="fab fa-microsoft"></i> Azure</span>
@@ -162,6 +175,11 @@
 </section>
 
 <section class="services-grid" id="services">
+    <div class="section-heading">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Practical engineering for critical systems.</h2>
+        <p>From first architecture decisions to day-two operations, we focus on systems that are clear to run and built to endure.</p>
+    </div>
     <div class="card">
         <i class="fas fa-microchip"></i>
         <h3>Systems Orchestration</h3>
@@ -193,45 +211,55 @@
 
 <section class="why-us">
     <div>
-        <h2>Why Partner with <br>Merkei Solutions?</h2>
-        <p style="color: #888;">We don't just fix problems; we prevent them through strategic architecting and proactive monitoring.</p>
+        <p class="eyebrow">THE WAY WE WORK</p>
+        <h2>Built for the whole lifecycle.</h2>
+        <p class="why-lede">Good infrastructure is easier to operate, easier to secure and easier to evolve. We bring architecture and implementation together so the result works beyond launch day.</p>
     </div>
     <div>
         <div class="why-box">
             <i class="fas fa-check-circle"></i>
             <div>
-                <strong>Proactive Prevention</strong>
-                <p style="color: #777; margin: 0;">Reducing downtime risk by 90% through resilient system design and 24/7 monitoring.</p>
+                <strong>Resilience by design</strong>
+                <p>Plan for recovery and maintainability from the beginning.</p>
             </div>
         </div>
         <div class="why-box">
             <i class="fas fa-check-circle"></i>
             <div>
-                <strong>Cost Governance</strong>
-                <p style="color: #777; margin: 0;">Optimizing multicloud infrastructure to reduce monthly operational costs significantly.</p>
+                <strong>Clear cost decisions</strong>
+                <p>Make capacity and cloud choices with visibility into ongoing cost.</p>
             </div>
         </div>
         <div class="why-box">
             <i class="fas fa-check-circle"></i>
             <div>
-                <strong>ISO 27001 Alignment</strong>
-                <p style="color: #777; margin: 0;">Ensuring every deployment follows global security standards for maximum data integrity.</p>
+                <strong>Security in the architecture</strong>
+                <p>Consider access, segmentation and protection at every layer.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="case-studies" class="portfolio">
-    <h2 style="text-align:center; font-size: 2.8rem; margin-bottom: 60px;">Proven Strategic Impact</h2>
+    <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Work across complex environments.</h2>
+        <p>Explore examples spanning telecom platforms, secure networks and cloud transformation.</p>
+        <span class="visual-note">Illustrative imagery</span>
+    </div>
 
-    <div class="project-card">
+    <div class="project-card featured-project">
+        <img src="images/case-esim-inventory.webp" alt="Illustrative eSIM inventory dashboard on a monitor and phone" loading="lazy">
+        <div class="project-content">
         <h3>eSIM Inventory Platform</h3>
         <p>A B2B reseller platform for eSIM inventory, carrier package orders, prepaid wallets and OTP delivery.</p>
-        <a href="esim-inventory.html" style="color: var(--secondary); font-weight: bold; display: inline-block; margin: 15px 0 20px;">Read eSIM Platform Case Study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="esim-inventory.html" class="case-link">View case study &amp; demo</a>
         <div><span class="tag">Node.js</span> <span class="tag">SQLite</span> <span class="tag">Telecom APIs</span> <span class="tag">Docker</span></div>
+        </div>
     </div>
 
     <div class="project-card">
+        <img class="project-thumb" src="images/case-sms-gateway.webp" alt="Illustrative secure messaging gateway equipment" loading="lazy">
         <h3>Enterprise SMS Gateway Optimization</h3>
         <p>Re-engineered a global SMS delivery infrastructure using Jasmin SMS and Docker. Achieved 3x higher throughput with low-latency SMPP connectivity for financial institutions.</p>
         <a href="sms-gateway.html" style="color: var(--secondary); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; margin-bottom: 20px; transition: 0.3s;">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
@@ -239,6 +267,7 @@
     </div>
 
     <div class="project-card">
+        <img class="project-thumb" src="images/case-360-assessment.webp" alt="Illustrative assessment dashboard on a laptop" loading="lazy">
         <h3>Secure 360-Assessment Platform Deployment</h3>
         <p>Architected a high-availability infrastructure for a multi-rater assessment system. Leveraged Cloudflare Zero Trust and Nginx to handle thousands of concurrent users securely.</p>
         <a href="360-assessment.html" style="color: var(--secondary); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; margin-bottom: 20px; transition: 0.3s;">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
@@ -246,6 +275,7 @@
     </div>
 
     <div class="project-card">
+        <img class="project-thumb" src="images/case-cloud-migration.webp" alt="Illustrative cloud-connected corporate workspace" loading="lazy">
         <h3>Cloud Infrastructure &amp; Workspace Migration</h3>
         <p>Architected a fully cloud-native corporate environment. Transitioned legacy systems to Microsoft Office 365 with centralized identity management, secure cloud networking, and seamless automated backups for business continuity.</p>
 
@@ -257,6 +287,7 @@
     </div>
 
     <div class="project-card">
+        <img class="project-thumb" src="images/case-onprem-network.webp" alt="Illustrative on-premise server room and network cabling" loading="lazy">
         <h3>On-Premise Datacenter &amp; Network Security</h3>
         <p>Deployed a highly secure, physical on-premise infrastructure for a mid-sized enterprise. Built from the ground up with structured Cat6 cabling, FortiGate firewall VLAN segmentation, Active Directory, and a centralized 3CX VoIP communication system.</p>
 
@@ -268,6 +299,7 @@
     </div>
 
     <div class="project-card">
+        <img class="project-thumb" src="images/case-web-commerce.webp" alt="Illustrative web storefront on desktop and phone" loading="lazy">
         <h3>Custom Web Application &amp; E-Commerce Platform</h3>
         <p>Designed and engineered a high-performance web application tailored for a seamless user experience. Integrated secure payment gateways, responsive modern UI, and optimized backend APIs to handle large volumes of daily transactions securely.</p>
 
@@ -281,8 +313,14 @@
 </section>
 
 <section id="contact" class="contact-section">
+    <div class="contact-intro">
+        <p class="eyebrow">START A CONVERSATION</p>
+        <h2>Let's make your next system more dependable.</h2>
+        <p>Tell us what you are building or improving, and we will get back to you by email.</p>
+        <a href="mailto:info@merkeisolutions.com">info@merkeisolutions.com</a>
+    </div>
     <form action="https://api.web3forms.com/submit" method="POST">
-        <h2 style="text-align:center; margin-bottom: 40px;">Build a Resilient Future</h2>
+        <h2>Tell us about your project</h2>
         <input type="hidden" name="access_key" value="fd16fcd3-3691-4b6d-87a8-f855182a7887">
         <!-- Web3Forms honeypot anti-spam -->
         <input type="checkbox" name="botcheck" style="display:none">
@@ -295,6 +333,7 @@
         <button type="submit">Submit Solution Proposal</button>
     </form>
 </section>
+</main>
 
 <footer>
     © 2026 Merkei Solutions. All Rights Reserved. <br>
