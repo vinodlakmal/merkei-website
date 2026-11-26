@@ -125,8 +125,9 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#case-studies">Case Studies</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-bot-item"><a href="#contact" data-bot-trigger aria-haspopup="dialog" aria-controls="contact-bot" aria-expanded="false">Let's talk</a></li>
     </ul>
-    <a class="nav-contact" href="#contact">Let's talk</a>
+    <a class="nav-contact" href="#contact" data-bot-trigger aria-haspopup="dialog" aria-controls="contact-bot" aria-expanded="false">Let's talk</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
 <script>
@@ -145,6 +146,38 @@
         });
     })();
 </script>
+
+<section id="contact-bot" class="contact-bot" role="dialog" aria-labelledby="bot-title" aria-describedby="bot-description" tabindex="-1" hidden>
+    <div class="bot-header">
+        <div>
+            <p class="bot-kicker">MERKEI SOLUTIONS</p>
+            <h2 id="bot-title">Quick project guide</h2>
+            <p id="bot-description">Automated help, not a live agent.</p>
+        </div>
+        <button id="bot-close" class="bot-close" type="button" aria-label="Close project guide">&times;</button>
+    </div>
+    <div class="bot-content">
+        <div id="bot-log" class="bot-log" role="log" aria-label="Project guide conversation" aria-live="polite" aria-relevant="additions">
+            <p class="bot-message bot-message-assistant">Hi! What are you working on? Choose a topic or ask a quick question.</p>
+        </div>
+        <div class="bot-topics" aria-label="Common topics">
+            <button type="button" data-bot-topic="cloud">Cloud &amp; infrastructure</button>
+            <button type="button" data-bot-topic="messaging">Secure messaging</button>
+            <button type="button" data-bot-topic="esim">eSIM &amp; web apps</button>
+            <button type="button" data-bot-topic="pricing">Pricing &amp; timeline</button>
+        </div>
+        <form id="bot-form" class="bot-compose">
+            <label for="bot-question">Ask a quick question</label>
+            <div class="bot-compose-row">
+                <input id="bot-question" type="text" maxlength="300" autocomplete="off" placeholder="Type your question" required>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <button id="bot-continue" class="bot-continue" type="button">Continue to contact form</button>
+        <p class="bot-note">Your chat stays in this browser. Nothing is sent until you submit the contact form.</p>
+    </div>
+</section>
+<script src="contact-bot.js" defer></script>
 
 <main id="main-content">
 <header class="hero">
